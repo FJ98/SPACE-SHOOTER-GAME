@@ -8,10 +8,8 @@ El proyecto fue probado en Ubuntu 18.04.1 LTS
 ## Ejecutar Galaga
 Instructiones para obtener una copia del proyecto y poder correrlo en tu computadora.
 
-### Prerequisites
-What things you need to install the software and how to install them
-
-**Prerequisitos**
+### Prerequisitos
+**Instalar SFML**
 - [SFML](https://www.sfml-dev.org/)
 En Ubuntu se puede instalar SFML con el siguiente comando:
 ```bash
@@ -48,12 +46,12 @@ bash run.sh
 ```
 6. Si una linea es muy ancha separarla a criterio propio
 
-## Autor
-**Felix Jesus Solano Vergara**
-**- Ciencias de la Conputacion - Universidad de Ingenieria y Tecnologia (UTEC)**
-**- Barranco, Lima - Peru** 
+### Autor
+**Felix Jesus Solano Vergara**\
+**- Ciencias de la Conputacion - Universidad de Ingenieria y Tecnologia (UTEC)**\
+**- Barranco, Lima - Peru (2019)** 
 
-## Licencia
+#### Licencia
 
 Este proyecto esta bajo **licencia MIT** - ver el folder [LICENSE.md](LICENSE.md) para mas informacion
 
