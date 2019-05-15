@@ -15,7 +15,14 @@ En Ubuntu se puede instalar SFML con el siguiente comando:
 sudo apt-get install libsfml-dev
 ```
 
-**Ejecución**
+**Asegurate de tener instalado g++**
+- [g++](https://linuxconfig.org/how-to-install-g-the-c-compiler-on-ubuntu-18-04-bionic-beaver-linux)
+En Ubuntu se puede instalar g++ con el siguiente comando:
+```
+sudo apt-get install g++
+```
+
+**Ejecución del juego**
 ```
 git clone https://github.com/FJ98/Galaga.git
 cd Galaga
