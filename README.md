@@ -46,9 +46,9 @@ bash run.sh
 ```
 6. Si una linea es muy ancha separarla a criterio propio
 
-### Autor
+#### Autor
 **Felix Jesus Solano Vergara**\
-**- Ciencias de la Conputacion - Universidad de Ingenieria y Tecnologia (UTEC)**\
+**- Ciencias de la Computacion - Universidad de Ingenieria y Tecnologia (UTEC)**\
 **- Barranco, Lima - Peru (2019)** 
 
 #### Licencia
