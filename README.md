@@ -24,7 +24,7 @@ bash run.sh
 ./Galaga.out
 ```
 
-### Estilos seguidos para escribir del codigo
+## Estilos seguidos para escribir del codigo
 1. Poner tab como 2 espacios en tu editor (para que se vea bien cuando lo subas
    a github)
 2. Estilo seguido para el nombre de cada class: **PascalCase**
@@ -47,9 +47,9 @@ bash run.sh
 6. Si una linea es muy ancha separarla a criterio propio
 
 #### Autor
-**Felix Jesus Solano Vergara**\
-**- Ciencias de la Computacion - Universidad de Ingenieria y Tecnologia (UTEC)**\
-**- Barranco, Lima - Peru (2019)** 
+Felix Jesus Solano Vergara\
+- Ciencias de la Computacion - Universidad de Ingenieria y Tecnologia (UTEC)\
+- Barranco, Lima - Peru (2019)
 
 #### Licencia
 
