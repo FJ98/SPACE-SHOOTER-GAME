@@ -3,11 +3,11 @@
 ## Diagrama de Clases del Proyecto
 UML(Agregar Link al diagrama de clases)
 El proyecto fue probado en Ubuntu 18.04.1 LTS
-- [UML](https://github.com/TISparta/Gradius/blob/master/uml_final.jpg)
+- [UML]```(https://github.com/TISparta/Galaga/blob/master/uml_final.jpg) MODIFICAR!```
 
-## Getting Started
+## Ejecutar Galaga
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Instructiones para obtener una copia del proyecto y poder correrlo en tu computadora will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 What things you need to install the software and how to install them
@@ -21,10 +21,10 @@ sudo apt-get install libsfml-dev
 
 **Ejecución**
 ```
-git clone https://github.com/TISparta/Gradius.git
-cd Gradius
+git clone https://github.com/FJ98/Galaga.git
+cd Galaga
 bash run.sh
-./Gradius.out
+./Galaga.out
 ```
 ### Installing
 
@@ -44,25 +44,30 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
+### Estilos seguidos para escribir del codigo
 
-Explain how to run the automated tests for this system
+## Pequeño estilo a seguir:
 
-### Break down into end to end tests
+1. Poner tab como 2 espacios en tu editor (para que se vea bien cuando lo subas
+   a github)
+2. Estilo seguido para el nombre de cada class: **PascalCase**
+3. Estilo seguido para el nombre de las funciones y las variables: **camelCase**
+4. Estilo de Indentacion: [K & R style - Variant: Stroustrup](https://en.wikipedia.org/wiki/Indentation_style#Variant:_Stroustrup)
+5. Entre llamados a estructuras de repeticion, de control, operadores,
+   parentesis, asignacion, definicion de funcion (donde veas necesario)
+   poner 1 espacio. Por ejemplo:
+   
+```c++
+  void foo () { return 1; }
 
-Explain what these tests test and why
+  void myFunction (int a, int b) {
+    for (int i = a; i <= b; i++) {
+      if (a % 2 == 0) foo();
+    }
+  }
 
 ```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+6. Si una linea es muy ancha separarla a criterio propio
 
 ## Deployment
 
