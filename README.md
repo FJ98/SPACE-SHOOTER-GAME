@@ -1,9 +1,8 @@
 # Galaga
 
 ## Diagrama de Clases del Proyecto
-UML(Agregar Link al diagrama de clases)
+- [UML](https://github.com/TISparta/Gradius/blob/master/uml_final.jpg) MODIFICAR!
 El proyecto fue probado en Ubuntu 18.04.1 LTS
-- [UML]```(https://github.com/TISparta/Galaga/blob/master/uml_final.jpg) MODIFICAR!```
 
 ## Ejecutar Galaga
 Instructiones para obtener una copia del proyecto y poder correrlo en tu computadora.
@@ -46,7 +45,7 @@ bash run.sh
 ```
 6. Si una linea es muy ancha separarla a criterio propio
 
-#### Autor
+### Autor
 **Felix Jesus Solano Vergara - Ciencias de la Computacion - Universidad de Ingenieria y Tecnologia (UTEC) - Barranco, Lima - Peru (2019)**
 
 #### Licencia
