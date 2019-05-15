@@ -53,4 +53,4 @@ Felix Jesus Solano Vergara - Ciencias de la Computacion - Universidad de Ingenie
 
 Este proyecto esta bajo **licencia MIT** - ver el folder [LICENSE.md](LICENSE.md) para mas informacion
 
-[Referencia](https://www.youtube.com/watch?v=dvjapcHsqXY&t=142s)
+[Referencia](https://www.youtube.com/watch?v=dvjapcHsqXY&t=)
