@@ -51,12 +51,13 @@ bash run.sh
 ```
 6. Si una linea es muy ancha separarla a criterio propio
 
-## Author
-
-* **Felix Jesus Solano Vergara - Ciencias de la Conputacion - Universidad de Ingenieria y Tecnologia (UTEC) - Barranco, Lima - Peru** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+## Autor
+**Felix Jesus Solano Vergara 
+- Ciencias de la Conputacion - Universidad de Ingenieria y Tecnologia (UTEC)**
+**- Barranco, Lima - Peru** 
 
 ## Licencia
 
-Este proyecto esta bajo la licencia MIT - ver el folder [LICENSE.md](LICENSE.md) para mas informacion
+Este proyecto esta bajo **licencia MIT** - ver el folder [LICENSE.md](LICENSE.md) para mas informacion
 
-[Referencia](https://www.youtube.com/watch?v=bUPWWuI2EY4)
+[Referencia](https://www.youtube.com/watch?v=dvjapcHsqXY&t=142s)
