@@ -27,9 +27,6 @@ bash run.sh
 ```
 
 ### Estilos seguidos para escribir del codigo
-
-## Pequeño estilo a seguir:
-
 1. Poner tab como 2 espacios en tu editor (para que se vea bien cuando lo subas
    a github)
 2. Estilo seguido para el nombre de cada class: **PascalCase**
@@ -52,8 +49,8 @@ bash run.sh
 6. Si una linea es muy ancha separarla a criterio propio
 
 ## Autor
-**Felix Jesus Solano Vergara 
-- Ciencias de la Conputacion - Universidad de Ingenieria y Tecnologia (UTEC)**
+**Felix Jesus Solano Vergara**
+**- Ciencias de la Conputacion - Universidad de Ingenieria y Tecnologia (UTEC)**
 **- Barranco, Lima - Peru** 
 
 ## Licencia
