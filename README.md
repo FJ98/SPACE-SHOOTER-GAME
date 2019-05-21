@@ -1,7 +1,7 @@
 # Galaga
 
 ## Diagrama de Clases del Proyecto
-- [UML](https://github.com/TISparta/Gradius/blob/master/uml_final.jpg) ```MODIFICAR!```
+- [UML](https://github.com/FJ98/Galaga/blob/master/UML-Galaga.pdf)
 El proyecto fue probado en Ubuntu 18.04.1 LTS
 
 ## Ejecutar Galaga
