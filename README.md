@@ -15,7 +15,7 @@ En Ubuntu se puede instalar SFML con el siguiente comando:
 sudo apt-get install libsfml-dev
 ```
 
-- Para unir SFML con Clion seguir el siguiente tutorial: [Como linkear SFML con Clion] (https://github.com/FJ98/Galaga/blob/master/Como%20linkear%20SFML%20con%20Clion.pdf) 
+- Para unir SFML con Clion seguir el siguiente tutorial: [Como linkear SFML con Clion](https://github.com/FJ98/Galaga/blob/master/Como%20linkear%20SFML%20con%20Clion.pdf) 
 Creditos: Luis Ponce Contreras - alumno de Ciencias de la Computacion - Universidad de Ingenieria y Tecnologia (UTEC) - Barranco, Lima-Peru
 
 **Asegurate de tener instalado g++**
