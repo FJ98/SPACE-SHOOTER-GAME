@@ -16,8 +16,8 @@ sudo apt-get install libsfml-dev
 ```
 
 **Para unir SFML con Clion seguir el siguiente tutorial:** 
-- [Como linkear SFML con Clion](https://github.com/FJ98/Galaga/blob/master/Como%20linkear%20SFML%20con%20Clion.pdf)\
-*Creditos: Luis Ponce Contreras - alumno de Ciencias de la Computacion - Universidad de Ingenieria y Tecnologia (UTEC) - Barranco, Lima-Peru*
+- [Como linkear SFML con Clion](https://github.com/FJ98/Galaga/blob/master/Como%20linkear%20SFML%20con%20Clion.pdf)
+Creditos: Luis Ponce Contreras - alumno de Ciencias de la Computacion - Universidad de Ingenieria y Tecnologia (UTEC) - Barranco, Lima-Peru
 
 **Asegurate de tener instalado g++**
 - [g++](https://linuxconfig.org/how-to-install-g-the-c-compiler-on-ubuntu-18-04-bionic-beaver-linux)
