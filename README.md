@@ -1,7 +1,7 @@
 # Galaga
 
 ## Diagrama de Clases del Proyecto
-- [UML](https://github.com/TISparta/Gradius/blob/master/uml_final.jpg) ```MODIFICAR!```
+- [UML](https://github.com/FJ98/Galaga/blob/master/UML-Galaga.pdf)
 El proyecto fue probado en Ubuntu 18.04.1 LTS
 
 ## Ejecutar Galaga
@@ -9,11 +9,14 @@ Instructiones para obtener una copia del proyecto y poder correrlo en tu computa
 
 ### Prerequisitos
 **Instalar SFML**
-- [SFML](https://www.sfml-dev.org/)
-En Ubuntu se puede instalar SFML con el siguiente comando:
+- [SFML](https://www.sfml-dev.org/) En Ubuntu se puede instalar SFML con el siguiente comando:
 ```bash
 sudo apt-get install libsfml-dev
 ```
+
+**Para unir SFML con Clion seguir el siguiente tutorial:** 
+- [Como linkear SFML con Clion](https://github.com/FJ98/Galaga/blob/master/Como%20linkear%20SFML%20con%20Clion.pdf) <br/>
+Creditos: Luis Ponce Contreras - alumno de Ciencias de la Computacion - UTEC - Barranco, Lima-Peru
 
 **Asegurate de tener instalado g++**
 - [g++](https://linuxconfig.org/how-to-install-g-the-c-compiler-on-ubuntu-18-04-bionic-beaver-linux)
