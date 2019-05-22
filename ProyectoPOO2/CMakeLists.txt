@@ -18,6 +18,6 @@ if(SFML_FOUND)
     message(STATUS "SFML_VERSION: ${SFML_VERSION}")
 endif()
 
-add_executable(SFMLApp main.cpp)
+add_executable(SFMLApp main.cpp Inicio.cpp Juego.cpp Salida.cpp Arena.cpp Bala.cpp Jugador.cpp Enemigo.cpp)
 target_link_libraries (SFMLApp sfml-graphics sfml-window sfml-system)
 
