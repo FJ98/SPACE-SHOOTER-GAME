@@ -48,11 +48,11 @@ private:
     Salida exit;
     Arena arena;
     Jugador jugador;
-    // Estado estado = Estado::PLAYING;
+    std::vector<Enemigo*> enemigo;
+    Estado estado = Estado::JUGANDO;
 
     sf::Event evento;
     sf::RenderWindow ventana;
-    std::vector<Enemigo*> enemigo;
     sf::Font* tipoDeLetra;
     sf::Texture* texturaNave;
     sf::Texture* texturaEnemigo1;

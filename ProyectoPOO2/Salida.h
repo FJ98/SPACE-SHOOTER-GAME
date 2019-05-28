@@ -15,7 +15,7 @@ public:
     Salida(sf::Font* tipoDeLetra, sf::Texture* texturaNave);
     ~Salida() = default;
     int getId();
-    void render(sf::RenderWindow ventana);
+    void render(sf::RenderWindow& ventana);
     void mover(int lugar);
 };
 

@@ -10,7 +10,7 @@ private:
     sf::RectangleShape bala;
 public:
     Bala() = default;
-    Bala(sf::Vector2f pos, int dir, sf::Texture textura);
+    Bala(sf::Vector2f pos, int dir, sf::Texture* textura);
     ~Bala() = default;
     void render(sf::RenderWindow& ventana);
     void actualizar();
