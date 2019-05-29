@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SFMLApp.dir/Bala.cpp.obj"
   "CMakeFiles/SFMLApp.dir/Jugador.cpp.obj"
   "CMakeFiles/SFMLApp.dir/Enemigo.cpp.obj"
+  "CMakeFiles/SFMLApp.dir/Jug.cpp.obj"
+  "CMakeFiles/SFMLApp.dir/Game.cpp.obj"
   "SFMLApp.pdb"
   "SFMLApp.exe"
   "SFMLApp.exe.manifest"

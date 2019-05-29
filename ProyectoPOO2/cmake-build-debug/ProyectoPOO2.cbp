@@ -102,6 +102,12 @@
 		<Unit filename="C:/Users/felix/Galaga/ProyectoPOO2/Enemigo.h">
 			<Option target="SFMLApp"/>
 		</Unit>
+		<Unit filename="C:/Users/felix/Galaga/ProyectoPOO2/Game.cpp">
+			<Option target="SFMLApp"/>
+		</Unit>
+		<Unit filename="C:/Users/felix/Galaga/ProyectoPOO2/Game.h">
+			<Option target="SFMLApp"/>
+		</Unit>
 		<Unit filename="C:/Users/felix/Galaga/ProyectoPOO2/Inicio.cpp">
 			<Option target="SFMLApp"/>
 		</Unit>
@@ -112,6 +118,12 @@
 			<Option target="SFMLApp"/>
 		</Unit>
 		<Unit filename="C:/Users/felix/Galaga/ProyectoPOO2/Juego.h">
+			<Option target="SFMLApp"/>
+		</Unit>
+		<Unit filename="C:/Users/felix/Galaga/ProyectoPOO2/Jug.cpp">
+			<Option target="SFMLApp"/>
+		</Unit>
+		<Unit filename="C:/Users/felix/Galaga/ProyectoPOO2/Jug.h">
 			<Option target="SFMLApp"/>
 		</Unit>
 		<Unit filename="C:/Users/felix/Galaga/ProyectoPOO2/Jugador.cpp">

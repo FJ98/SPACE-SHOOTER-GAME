@@ -203,6 +203,33 @@ Enemigo.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLApp.dir\build.make CMakeFiles/SFMLApp.dir/Enemigo.cpp.s
 .PHONY : Enemigo.cpp.s
 
+Game.obj: Game.cpp.obj
+
+.PHONY : Game.obj
+
+# target to build an object file
+Game.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLApp.dir\build.make CMakeFiles/SFMLApp.dir/Game.cpp.obj
+.PHONY : Game.cpp.obj
+
+Game.i: Game.cpp.i
+
+.PHONY : Game.i
+
+# target to preprocess a source file
+Game.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLApp.dir\build.make CMakeFiles/SFMLApp.dir/Game.cpp.i
+.PHONY : Game.cpp.i
+
+Game.s: Game.cpp.s
+
+.PHONY : Game.s
+
+# target to generate assembly for a file
+Game.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLApp.dir\build.make CMakeFiles/SFMLApp.dir/Game.cpp.s
+.PHONY : Game.cpp.s
+
 Inicio.obj: Inicio.cpp.obj
 
 .PHONY : Inicio.obj
@@ -256,6 +283,33 @@ Juego.s: Juego.cpp.s
 Juego.cpp.s:
 	$(MAKE) -f CMakeFiles\SFMLApp.dir\build.make CMakeFiles/SFMLApp.dir/Juego.cpp.s
 .PHONY : Juego.cpp.s
+
+Jug.obj: Jug.cpp.obj
+
+.PHONY : Jug.obj
+
+# target to build an object file
+Jug.cpp.obj:
+	$(MAKE) -f CMakeFiles\SFMLApp.dir\build.make CMakeFiles/SFMLApp.dir/Jug.cpp.obj
+.PHONY : Jug.cpp.obj
+
+Jug.i: Jug.cpp.i
+
+.PHONY : Jug.i
+
+# target to preprocess a source file
+Jug.cpp.i:
+	$(MAKE) -f CMakeFiles\SFMLApp.dir\build.make CMakeFiles/SFMLApp.dir/Jug.cpp.i
+.PHONY : Jug.cpp.i
+
+Jug.s: Jug.cpp.s
+
+.PHONY : Jug.s
+
+# target to generate assembly for a file
+Jug.cpp.s:
+	$(MAKE) -f CMakeFiles\SFMLApp.dir\build.make CMakeFiles/SFMLApp.dir/Jug.cpp.s
+.PHONY : Jug.cpp.s
 
 Jugador.obj: Jugador.cpp.obj
 
@@ -356,12 +410,18 @@ help:
 	@echo ... Enemigo.obj
 	@echo ... Enemigo.i
 	@echo ... Enemigo.s
+	@echo ... Game.obj
+	@echo ... Game.i
+	@echo ... Game.s
 	@echo ... Inicio.obj
 	@echo ... Inicio.i
 	@echo ... Inicio.s
 	@echo ... Juego.obj
 	@echo ... Juego.i
 	@echo ... Juego.s
+	@echo ... Jug.obj
+	@echo ... Jug.i
+	@echo ... Jug.s
 	@echo ... Jugador.obj
 	@echo ... Jugador.i
 	@echo ... Jugador.s

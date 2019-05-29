@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "Juego.h"
+#include "Game.h"
 #include <exception>
 #include <iostream>
 
@@ -19,8 +20,11 @@ static float DOWN = 10.0f;
 
 int main(){
     std::cout << "Hello World!" << std::endl;
+    sf::String titulo = "Tit";
 
-    crearVentanta();
+    Game game1({500,500}, titulo);
+    game1.gameLoop();
+    //crearVentanta();
 
     /* sf::RenderWindow window(sf::VideoMode(800, 300), "SFML works!");
     sf::CircleShape shape(100.f);
@@ -43,11 +47,17 @@ int main(){
 
 sf::RenderWindow crearVentanta(){
     sf::RenderWindow window(sf::VideoMode(WIDTH,HEIGHT), "FelixSolano",sf::Style::Default);
+
     sf::RectangleShape player(sf::Vector2f(PLAYER_WIDTH,PLAYER_HEIGHT));
     player.setPosition(PLAYER_X_POSITION, PLAYER_Y_POSITION);
     sf::Texture playerTexture;
     playerTexture.loadFromFile("./images/galagaNave.png");
     player.setTexture(&playerTexture);
+
+    sf::RectangleShape bala(sf::Vector2f(PLAYER_WIDTH,PLAYER_HEIGHT));
+    bala.setFillColor(sf::Color::Blue);
+
+
     while(window.isOpen()){
         sf::Event evnt{};
         while(window.pollEvent(evnt)){
