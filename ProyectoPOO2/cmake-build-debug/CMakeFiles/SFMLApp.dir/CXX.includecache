@@ -876,6 +876,16 @@ vector
 Bala.h
 C:/Users/felix/Galaga/ProyectoPOO2/Bala.h
 
+C:/Users/felix/Galaga/ProyectoPOO2/Game.cpp
+Game.h
+C:/Users/felix/Galaga/ProyectoPOO2/Game.h
+
+C:/Users/felix/Galaga/ProyectoPOO2/Game.h
+SFML/Graphics.hpp
+-
+Jug.h
+C:/Users/felix/Galaga/ProyectoPOO2/Jug.h
+
 C:/Users/felix/Galaga/ProyectoPOO2/Inicio.h
 SFML/Graphics.hpp
 -
@@ -900,6 +910,10 @@ C:/Users/felix/Galaga/ProyectoPOO2/Jugador.h
 Salida.h
 C:/Users/felix/Galaga/ProyectoPOO2/Salida.h
 
+C:/Users/felix/Galaga/ProyectoPOO2/Jug.h
+SFML/Graphics.hpp
+-
+
 C:/Users/felix/Galaga/ProyectoPOO2/Jugador.h
 SFML/Graphics.hpp
 -
@@ -919,6 +933,8 @@ SFML/Graphics.hpp
 -
 Juego.h
 C:/Users/felix/Galaga/ProyectoPOO2/Juego.h
+Game.h
+C:/Users/felix/Galaga/ProyectoPOO2/Game.h
 exception
 -
 iostream
