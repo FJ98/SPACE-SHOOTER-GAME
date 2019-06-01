@@ -44,7 +44,7 @@ int main(){
 
     return 0;
 }
-
+/*
 sf::RenderWindow crearVentanta(){
     sf::RenderWindow window(sf::VideoMode(WIDTH,HEIGHT), "FelixSolano",sf::Style::Default);
 
@@ -69,6 +69,7 @@ sf::RenderWindow crearVentanta(){
             controlarTeclado(player);
             //controlarMouse(player, window);
             window.clear();
+
             window.draw(player);
             window.display();
         }
@@ -98,8 +99,7 @@ void controlarMouse(sf::RectangleShape& player, sf::RenderWindow& window){
     }
 
 }
-
-
+*/
 
 
 /*

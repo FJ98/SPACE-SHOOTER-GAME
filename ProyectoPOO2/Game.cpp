@@ -12,7 +12,7 @@ Game::Game(sf::Vector2f resolution, sf::String& titulo) {
     time2 = 0.0f;
 
     player1 = new Jug();
-
+    enemy1 = new Enemy();
 }
 
 void Game::gameLoop() {
@@ -23,16 +23,14 @@ void Game::gameLoop() {
                 window->close();
         }
 
-        *time1 = clock1->getElapsedTime();
-        if ( (time1->asSeconds()) > (time2 + fps) ) {
-
-            time2 = time1->asSeconds();
+            time2 = clock1->getElapsedTime().asSeconds();
 
             window->clear();
             player1->update(time2);
-            window->draw(player1->getSprite());
 
+            window->draw(player1->getSprite());
             window->display();
-        }
+
+
     }
 }

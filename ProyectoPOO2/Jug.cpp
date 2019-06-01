@@ -1,6 +1,6 @@
 // Created by felix on 5/28/2019.
 #include "Jug.h"
-
+#include <random>
 
 Jug::Jug() {
     texturaJugador = new sf::Texture;
@@ -15,4 +15,19 @@ Jug::Jug() {
 
 void Jug::update(float delta_t){
     spriteJugador->setPosition(spriteJugador->getPosition().x + velocidad.x*delta_t, spriteJugador->getPosition().y + velocidad.y * delta_t);
+}
+
+Enemy::Enemy() {
+    texturaEnemy = new sf::Texture;
+    texturaEnemy->loadFromFile("./images/galagaEnemigo1.png");
+    spriteEnemy = new sf::Sprite(*texturaEnemy);
+    spriteEnemy->setPosition(200, 100);
+}
+
+void Enemy::updateVel(float delta_t) {
+
+}
+
+void Enemy::update() {
+
 }

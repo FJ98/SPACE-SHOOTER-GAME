@@ -4,6 +4,11 @@
 
 #include <SFML/Graphics.hpp>
 
+class Entity{
+public:
+    virtual void update() = 0;
+    virtual void draw() = 0;
+};
 class Jug {
 public:
     Jug();
@@ -16,5 +21,17 @@ private:
     sf::Vector2f velocidad;
 };
 
+class Enemy{
+public:
+    Enemy();
+    void updateVel(float delta_t);
+    void update();
+    sf::Sprite getSprite(){return *spriteEnemy;}
+
+private:
+    sf::Sprite* spriteEnemy;
+    sf::Texture* texturaEnemy;
+    sf::Vector2f velocidad;
+};
 
 #endif //PROYECTOPOO2_JUG_H

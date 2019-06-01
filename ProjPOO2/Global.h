@@ -6,11 +6,10 @@
 #define PROJPOO2_GLOBAL_H
 
 
-
 class Global {
-
+public:
+    static int highScore;
 };
-
 
 
 #endif //PROJPOO2_GLOBAL_H

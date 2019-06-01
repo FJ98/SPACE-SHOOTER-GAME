@@ -4,6 +4,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "Jug.h"
+#include <random>
 
 class Game {
 public:
@@ -22,6 +23,7 @@ private:
     bool gameOver = false;
 
     Jug* player1;
+    Enemy* enemy1;
 };
 
 

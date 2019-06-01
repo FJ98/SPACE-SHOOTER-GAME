@@ -4,7 +4,9 @@
 
 #include <SFML/Graphics.hpp>
 #include "../Bala.h"
+#include "../Player.h"
 #include "BaseScene.h"
+#include "../EscenaInicio.h"
 
 /* Clase para manejar un bucle de juego con distintas escenas */
 class Game {
@@ -16,14 +18,15 @@ public:
     static Game &getInstance();
     // crear un juego especificando el modo de video y la escena inicial
     static Game &create(const sf::VideoMode &videoMode, BaseScene *scene, const sf::String &name = "");
+    static Game &create(const sf::VideoMode &videoMode, const sf::String &name);
 
     Game(sf::Vector2f resolution, sf::String& titulo);
     void gameLoop();
 
 private:
-    sf::RenderWindow* window;
+    sf::RenderWindow window;
     BaseScene *currentScene, *nextScene;
-    sf::Clock* clock;
+    sf::Clock clock;
     void processEvents();
     void update();
     void draw();
@@ -36,8 +39,11 @@ private:
     float time2;
     float fps;
     bool gameOver = false;
+
     Bala* bala;
     Bala* bala2;
+
+
 };
 
 

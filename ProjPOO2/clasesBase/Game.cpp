@@ -5,7 +5,23 @@ Game *Game::instance = nullptr;
 
 
 void Game::run() {
-
+    while(window.isOpen() && currentScene != nullptr) {
+        sf::Event e{};
+        while(window.pollEvent(e)){
+            if(e.type == sf::Event::Closed){
+                window.close();
+            }else{
+                currentScene->process_event(e);
+            }
+        }
+        update();
+        draw();
+        if(nextScene != nullptr){
+            delete currentScene;
+            currentScene = nextScene;
+            nextScene = nullptr;
+        }
+    }
 }
 
 void Game::switchScene(BaseScene *scene) {
@@ -23,16 +39,23 @@ Game &Game::create(const sf::VideoMode &videoMode, BaseScene *scene, const sf::S
     return getInstance();
 }
 
+Game &Game::create(const sf::VideoMode &videoMode, const sf::String &name) {
+    return getInstance();
+}
+
 void Game::processEvents() {
 
 }
 
 void Game::update() {
-
+    currentScene->update(clock.getElapsedTime().asSeconds());
+    clock.restart();
 }
 
 void Game::draw() {
-
+    window.clear(sf::Color::Blue);
+    currentScene->draw(window);
+    window.display();
 }
 
 
@@ -51,7 +74,6 @@ Game::Game(sf::Vector2f resolution, sf::String& titulo) {
     //bala2 = new Bala();
     //bala->getSprite().setPosition(300,300);
     //bala2->getSprite().setPosition(300,300);
-
 }
 
 void Game::gameLoop() {

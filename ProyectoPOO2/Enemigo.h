@@ -6,6 +6,7 @@
 #include <vector>
 #include "Bala.h"
 
+
 class Enemigo {
 public:
     Enemigo() = default;
