@@ -1,7 +1,7 @@
 // Created by felix on 6/1/2019.
 #include "Player.h"
 const float NAVE_SPEED = 4.0f, NAVE_SCALE = 0.05f,
-NAVE_MAX_VEL = 20.0f, NAVE_ACCELERATION = 3.0f;
+NAVE_MAX_VEL = 20.0f, NAVE_ACCELERATION = 3.0f, NAVE_STABLE = 0.5f;
 const int SHOOT_TIMER_MAX = 25, DAMAGE_TIMER_MAX = 10;
 
 unsigned Player::players = 0;
@@ -31,7 +31,7 @@ Player::Player(sf::Texture *texture, sf::Texture *bulletTexture,
 
     this->maxVelocity = NAVE_MAX_VEL;
     this->acceleration = NAVE_ACCELERATION;
-    this->stabilizerForce = 0.5f;
+    this->stabilizerForce = NAVE_STABLE;
 
     this->playerNr = Player::players;
     Player::players++;
@@ -74,6 +74,31 @@ void Player::movement() {
             this->currentVelocity.x += this->direction.x * acceleration;
         }
     }
+    //Drag Force
+    if (this->currentVelocity.x > 0){
+        this->currentVelocity.x -= this->stabilizerForce;
+        if (this->currentVelocity.x < 0){
+            this->currentVelocity.x = 0;
+        }
+    }
+    else if (this->currentVelocity.x < 0){
+        this->currentVelocity.x += this->stabilizerForce;
+        if (this->currentVelocity.x > 0){
+            this->currentVelocity.x = 0;
+        }
+    }
+    if (this->currentVelocity.y > 0){
+        this->currentVelocity.y -= this->stabilizerForce;
+        if (this->currentVelocity.y < 0){
+            this->currentVelocity.y = 0;
+        }
+    }
+    else if (this->currentVelocity.y < 0){
+        this->currentVelocity.y += this->stabilizerForce;
+        if (this->currentVelocity.y > 0){
+            this->currentVelocity.y = 0;
+        }
+    }
     // mov final
     this->sprite.move(this->currentVelocity);
 
@@ -99,7 +124,7 @@ void Player::update(sf::Vector2u windowBounds) {
 
     // update positions
     this->playerCenter.x = this->sprite.getPosition().x +
-            this->sprite.getGlobalBounds().width / 2;
+            this->sprite.getGlobalBounds().width;
     this->playerCenter.y = this->sprite.getPosition().y +
             this->sprite.getGlobalBounds().height / 2;
 
