@@ -1,6 +1,7 @@
 // Created by felix on 6/1/2019.
 #include "Player.h"
-const float NAVE_SPEED = 4.0f, NAVE_SCALE = 0.05f;
+const float NAVE_SPEED = 4.0f, NAVE_SCALE = 0.05f,
+NAVE_MAX_VEL = 20.0f, NAVE_ACCELERATION = 3.0f;
 const int SHOOT_TIMER_MAX = 25, DAMAGE_TIMER_MAX = 10;
 
 unsigned Player::players = 0;
@@ -28,6 +29,10 @@ Player::Player(sf::Texture *texture, sf::Texture *bulletTexture,
     this->controls[controls::RIGHT] = RIGHT;
     this->controls[controls::SHOOT] = SHOOT;
 
+    this->maxVelocity = NAVE_MAX_VEL;
+    this->acceleration = NAVE_ACCELERATION;
+    this->stabilizerForce = 0.5f;
+
     this->playerNr = Player::players;
     Player::players++;
 }
@@ -37,18 +42,40 @@ Player::~Player() {
 }
 
 void Player::movement() {
+    // ARRIBA
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->controls[controls::UP]))){
-        this->sprite.move(0.0f, -NAVE_SPEED);
+        this->direction.x = 0.0f;
+        this->direction.y = -1.0f;
+        if (this->currentVelocity.y > -this->maxVelocity && this->direction.y < 0) {
+            this->currentVelocity.y += this->direction.y * acceleration;
+        }
     }
+    // ABAJO
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->controls[controls::DOWN]))){
-        this->sprite.move(0.0f, NAVE_SPEED);
+        this->direction.x = 0.0f;
+        this->direction.y = 1.0f;
+        if (this->currentVelocity.y < this->maxVelocity && this->direction.y > 0) {
+            this->currentVelocity.y += this->direction.y * acceleration;
+        }
     }
+    //IZQUIERDA
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->controls[controls::LEFT]))){
-        this->sprite.move(-NAVE_SPEED, 0.0f);
+        this->direction.x = -1.0f;
+        this->direction.y = 0.0f;
+        if (this->currentVelocity.x > -this->maxVelocity && this->direction.x < 0) {
+            this->currentVelocity.x += this->direction.x * acceleration;
+        }
     }
+    // DERECHA
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->controls[controls::RIGHT]))){
-        this->sprite.move(NAVE_SPEED, 0.0f);
+        this->direction.x = 1.0f;
+        this->direction.y = 0.0f;
+        if (this->currentVelocity.x < this->maxVelocity && this->direction.x > 0) {
+            this->currentVelocity.x += this->direction.x * acceleration;
+        }
     }
+    // mov final
+    this->sprite.move(this->currentVelocity);
 
 }
 

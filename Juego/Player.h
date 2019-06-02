@@ -25,6 +25,12 @@ private:
 
     int controls[5];
 
+    sf::Vector2f currentVelocity;
+    float maxVelocity;
+    float acceleration;
+    sf::Vector2f direction;
+    float stabilizerForce;
+
     int level;
     int exp;
     int expNext;
