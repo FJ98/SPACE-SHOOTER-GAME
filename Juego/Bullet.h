@@ -8,16 +8,24 @@
 #include <iostream>
 #include <vector>
 using namespace sf; using namespace std;
-const float BALA_SPEED = 4.0f; //revisar bordes ventana y modificar
+const float BALA_SPEED = 35.0f; //revisar bordes ventana y modificar
+const float BALA_DIRX = 1.0f, BALA_DIRY = 0.0f ;
+const float BALA_ACCEL = 0.5f;
 class Bullet {
 private:
     sf::Texture *texture;
     sf::Sprite sprite;
 
-    sf::Vector2f maxVelocity;
+    sf::Vector2f currentVelocity;
+    float initialVelocity;
+    float maxVelocity;
+    float acceleration;
+    sf::Vector2f direction;
+
 public:
-    Bullet( sf::Texture *texture, sf::Vector2f position,
-            sf::Vector2f maxVelocity = sf::Vector2f(0.0f,-BALA_SPEED) );
+    Bullet( sf::Texture *texture,sf::Vector2f position,
+            sf::Vector2f direction,float initialVelocity,
+            float maxVelocity,float acceleration);
     virtual ~Bullet();
 
     //Accesos

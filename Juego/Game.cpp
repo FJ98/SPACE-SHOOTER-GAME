@@ -9,13 +9,13 @@ Game::Game(sf::RenderWindow *window) {
     this->font.loadFromFile("./fonts/arial.ttf");
 
     // Init Textures
-    this->playerTexture.loadFromFile("./images/nave.png");
-    this->bulletTexture.loadFromFile("./images/bala.png");
+    this->playerTexture.loadFromFile("./images/nave2.png");
+    this->bulletTexture.loadFromFile("./images/bala2.png");
 
     //Init Player
     this->players.push_back(Player(&playerTexture, &bulletTexture)); // Jugador1
-    /*this->players.push_back(Player(&playerTexture, &bulletTexture,sf::Keyboard::I,
-            sf::Keyboard::K, sf::Keyboard::J,sf::Keyboard::L, sf::Keyboard::M));// Jugador2 */
+    //this->players.push_back(Player(&playerTexture, &bulletTexture,sf::Keyboard::I,
+    //        sf::Keyboard::K, sf::Keyboard::J,sf::Keyboard::L, sf::Keyboard::M));// Jugador2
     //Init UI
     this->initUI();
 }
@@ -47,7 +47,7 @@ void Game::updateUI() {
     for (int i = 0; i < this->followPlayerTexts.size(); ++i) {
         this->followPlayerTexts[i].setPosition(this->players[i].getPosition().x, this->players[i].getPosition().y - 20.0f);
         this->followPlayerTexts[i].setString(std::to_string(i) +
-                                             " | " + this->players[i].getHpAsString());
+                                             "\t\t" + this->players[i].getHpAsString());
     }
     for (int i = 0; i < this->staticPlayerTexts.size(); ++i) {
     }

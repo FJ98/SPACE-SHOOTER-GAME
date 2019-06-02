@@ -2,6 +2,7 @@
 #include "Player.h"
 const float NAVE_SPEED = 4.0f, NAVE_SCALE = 0.05f;
 const int SHOOT_TIMER_MAX = 25, DAMAGE_TIMER_MAX = 10;
+
 unsigned Player::players = 0;
 enum controls{UP, DOWN, LEFT, RIGHT, SHOOT};
 
@@ -14,7 +15,7 @@ Player::Player(sf::Texture *texture, sf::Texture *bulletTexture,
     this->bulletTexture = bulletTexture;
     this->sprite.setTexture(*this->texture);
     this->sprite.setScale(NAVE_SCALE,NAVE_SCALE);
-    this->sprite.setPosition(300.0f, 800.0f);
+    //this->sprite.setPosition(300.0f, 800.0f);
 
     this->shootTimerMax = SHOOT_TIMER_MAX;
     this->shootTimer = this->shootTimerMax;
@@ -54,7 +55,8 @@ void Player::movement() {
 void Player::combat() {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->controls[controls::SHOOT]))
         && this->shootTimer >= this->shootTimerMax){
-        this->bullets.push_back( Bullet(bulletTexture, this->sprite.getPosition()) );
+        this->bullets.push_back( Bullet(bulletTexture, this->playerCenter,
+                sf::Vector2f(BALA_DIRX,BALA_DIRY), 5.0f, BALA_SPEED, BALA_ACCEL));
         this->shootTimer = 0; // RESET TIMER
     }
 }
@@ -67,6 +69,13 @@ void Player::update(sf::Vector2u windowBounds) {
     if (this->damageTimer < this->damageTimerMax){
         damageTimer++;
     }
+
+    // update positions
+    this->playerCenter.x = this->sprite.getPosition().x +
+            this->sprite.getGlobalBounds().width / 2;
+    this->playerCenter.y = this->sprite.getPosition().y +
+            this->sprite.getGlobalBounds().height / 2;
+
     this->movement();
     this->combat();
 }

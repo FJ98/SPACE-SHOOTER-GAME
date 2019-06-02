@@ -1,6 +1,6 @@
 #include "Game.h"
 
-const int WIDTH = 600, HEIGHT = 900;
+const int WIDTH = 1600, HEIGHT = 900;
 int main() {
     std::cout << "Hello, World!" << std::endl;
     sf::RenderWindow window(sf::VideoMode(WIDTH,HEIGHT),"Juego",sf::Style::Default) ;

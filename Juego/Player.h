@@ -8,6 +8,8 @@ class Player {
 private:
     unsigned playerNr;
 
+    sf::Vector2f playerCenter;
+
     int shootTimer;
     int shootTimerMax;
 
