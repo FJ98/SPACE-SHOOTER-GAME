@@ -1,6 +1,6 @@
 // Created by felix on 6/1/2019.
 #include "Game.h"
-
+enum textures{PLAYER, BULLET, ENEMY01, ENEMY02};
 Game::Game(sf::RenderWindow *window) {
     this->window = window;
     this->window->setFramerateLimit(60);
@@ -11,11 +11,15 @@ Game::Game(sf::RenderWindow *window) {
     // Init Textures
     this->playerTexture.loadFromFile("./images/nave2.png");
     this->bulletTexture.loadFromFile("./images/bala2.png");
+    //this->enemyTexture.loadFromFile("./images/enemigo01.png");
 
     //Init Player
     this->players.push_back(Player(&playerTexture, &bulletTexture)); // Jugador1
     //this->players.push_back(Player(&playerTexture, &bulletTexture,sf::Keyboard::I,
     //        sf::Keyboard::K, sf::Keyboard::J,sf::Keyboard::L, sf::Keyboard::M));// Jugador2
+
+    // Init Enemy
+
     //Init UI
     this->initUI();
 }

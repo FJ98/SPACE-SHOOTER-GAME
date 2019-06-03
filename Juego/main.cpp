@@ -3,6 +3,7 @@
 const int WIDTH = 1600, HEIGHT = 900;
 int main() {
     std::cout << "Hello, World!" << std::endl;
+    //srand(time(nullptr));
     sf::RenderWindow window(sf::VideoMode(WIDTH,HEIGHT),"Juego",sf::Style::Default) ;
 
     Game game(&window);

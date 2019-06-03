@@ -7,10 +7,14 @@
 #include <SFML/Audio.hpp>
 #include <iostream>
 #include <vector>
+#include <cstdlib>
+#include <random>
 using namespace sf; using namespace std;
-const float BALA_SPEED = 35.0f; //revisar bordes ventana y modificar
-const float BALA_DIRX = 1.0f, BALA_DIRY = 0.0f ;
-const float BALA_ACCEL = 0.5f;
+
+const float BALA_DIRX = 1.0f, BALA_DIRY = 0.0f,
+BALA_INIT_VEL = 2.0f, BALA_MAX_VEL = 50.0f, //revisar bordes ventana y modificar
+BALA_ACCEL = 1.0f;
+
 class Bullet {
 private:
     sf::Texture *texture;

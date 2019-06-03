@@ -1,7 +1,7 @@
 // Created by felix on 6/1/2019.
 #include "Player.h"
 const float NAVE_SPEED = 4.0f, NAVE_SCALE = 0.05f,
-NAVE_MAX_VEL = 20.0f, NAVE_ACCELERATION = 3.0f, NAVE_STABLE = 0.5f;
+NAVE_MAX_VEL = 25.0f, NAVE_ACCELERATION = 0.8f, NAVE_STABLE = 0.4f;
 const int SHOOT_TIMER_MAX = 25, DAMAGE_TIMER_MAX = 10;
 
 unsigned Player::players = 0;
@@ -42,6 +42,7 @@ Player::~Player() {
 }
 
 void Player::movement() {
+    // Configurado para que la nave tenga un movimiento suave y algo inestable
     // ARRIBA
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->controls[controls::UP]))){
         this->direction.x = 0.0f;
@@ -74,7 +75,7 @@ void Player::movement() {
             this->currentVelocity.x += this->direction.x * acceleration;
         }
     }
-    //Drag Force
+    // Estabilizador de la nave
     if (this->currentVelocity.x > 0){
         this->currentVelocity.x -= this->stabilizerForce;
         if (this->currentVelocity.x < 0){
@@ -108,7 +109,7 @@ void Player::combat() {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->controls[controls::SHOOT]))
         && this->shootTimer >= this->shootTimerMax){
         this->bullets.push_back( Bullet(bulletTexture, this->playerCenter,
-                sf::Vector2f(BALA_DIRX,BALA_DIRY), 5.0f, BALA_SPEED, BALA_ACCEL));
+                sf::Vector2f(BALA_DIRX,BALA_DIRY), BALA_INIT_VEL, BALA_MAX_VEL, BALA_ACCEL));
         this->shootTimer = 0; // RESET TIMER
     }
 }

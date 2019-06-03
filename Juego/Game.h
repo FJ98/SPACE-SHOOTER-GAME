@@ -3,7 +3,7 @@
 #define JUEGO_GAME_H
 
 #include "Player.h"
-
+#include "Enemy.h"
 class Game {
 private:
     sf::RenderWindow *window;
@@ -17,9 +17,13 @@ private:
     std::vector<Player> players;
 
     //Textures
+    //std::vector<sf::Texture*> textures;
     sf::Texture playerTexture;
     sf::Texture bulletTexture;
+    sf::Texture enemyTexture;
 
+    //Enemies
+    std::vector<Enemy> enemies;
 public:
     Game(sf::RenderWindow *window);
     virtual ~Game();

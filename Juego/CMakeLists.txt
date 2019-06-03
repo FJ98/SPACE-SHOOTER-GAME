@@ -19,5 +19,5 @@ if(SFML_FOUND)
 endif()
 
 
-add_executable(SFMLApp main.cpp Game.cpp Player.cpp Bullet.cpp)
+add_executable(SFMLApp main.cpp Game.cpp Player.cpp Bullet.cpp Enemy.cpp)
 target_link_libraries (SFMLApp sfml-graphics sfml-window sfml-system)
