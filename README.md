@@ -56,6 +56,7 @@ bash run.sh
 
 ### Autor
 **Felix Jesus Solano Vergara - Facultad de Ciencias de la Computacion - Universidad de Ingenieria y Tecnologia (UTEC) - Barranco, Lima - Peru (2019)**
+
 **Jeanlee Barreto - Facultad de Ciencias de la Computacion - Universidad de Ingenieria y Tecnologia (UTEC) - Barranco, Lima - Peru (2019)**
 
 
