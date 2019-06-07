@@ -2,7 +2,7 @@
 #include "Player.h"
 const float NAVE_SPEED = 4.0f, NAVE_SCALE = 0.05f,
 NAVE_MAX_VEL = 25.0f, NAVE_ACCELERATION = 0.8f, NAVE_STABLE = 0.4f;
-const int SHOOT_TIMER_MAX = 25, DAMAGE_TIMER_MAX = 10;
+const int SHOOT_TIMER_MAX = 10, DAMAGE_TIMER_MAX = 10;
 
 unsigned Player::players = 0;
 enum controls{UP, DOWN, LEFT, RIGHT, SHOOT};
