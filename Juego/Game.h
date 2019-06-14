@@ -52,7 +52,7 @@ public:
 };
 
 template <typename T>
-void cargar(T& target, std::string path) {
+void cargar(T& target, std::string path) { 
     target.loadFromFile(path);
 }
 
