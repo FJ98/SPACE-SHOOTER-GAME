@@ -53,6 +53,7 @@ public:
     //Accesos
     inline std::vector<Bullet>& getBulltes(){return this->bullets;}
     inline const sf::Vector2f& getPosition() const {return this->sprite.getPosition();}
+    inline int getHp() { return this->hp; }
     inline const  sf::String getHpAsString() const {return std::to_string(this->hp) + "/" + std::to_string(this->hpMax);}
     inline FloatRect  getGlobalBounds() const {return this->sprite.getGlobalBounds();}
     inline sf::Sprite &getSprite() {return this->sprite ;}
