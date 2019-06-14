@@ -1,7 +1,7 @@
 // Created by felix on 6/1/2019.
 #include "Player.h"
-const float NAVE_SPEED = 4.0f, NAVE_SCALE = 0.07f,
-NAVE_MAX_VEL = 25.0f, NAVE_ACCELERATION = 0.8f, NAVE_STABLE = 0.4f;
+const float NAVE_SPEED = 1.0f, NAVE_SCALE = 0.07f,
+NAVE_MAX_VEL = 25.0f, NAVE_ACCELERATION = 0.3f, NAVE_STABLE = 0.07f;
 const int SHOOT_TIMER_MAX = 15, DAMAGE_TIMER_MAX = 10;
 
 unsigned Player::players = 0;
@@ -46,7 +46,7 @@ void Player::movement() {
     // ARRIBA
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->controls[controls::UP]))){
         this->direction.x = 0.0f;
-        this->direction.y = -1.0f;
+        this->direction.y = -NAVE_SPEED;
         if (this->currentVelocity.y > -this->maxVelocity && this->direction.y < 0) {
             this->currentVelocity.y += this->direction.y * acceleration;
         }
@@ -54,14 +54,14 @@ void Player::movement() {
     // ABAJO
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->controls[controls::DOWN]))){
         this->direction.x = 0.0f;
-        this->direction.y = 1.0f;
+        this->direction.y = NAVE_SPEED;
         if (this->currentVelocity.y < this->maxVelocity && this->direction.y > 0) {
             this->currentVelocity.y += this->direction.y * acceleration;
         }
     }
     //IZQUIERDA
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->controls[controls::LEFT]))){
-        this->direction.x = -1.0f;
+        this->direction.x = -NAVE_SPEED;
         this->direction.y = 0.0f;
         if (this->currentVelocity.x > -this->maxVelocity && this->direction.x < 0) {
             this->currentVelocity.x += this->direction.x * acceleration;
@@ -69,7 +69,7 @@ void Player::movement() {
     }
     // DERECHA
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->controls[controls::RIGHT]))){
-        this->direction.x = 1.0f;
+        this->direction.x = NAVE_SPEED;
         this->direction.y = 0.0f;
         if (this->currentVelocity.x < this->maxVelocity && this->direction.x > 0) {
             this->currentVelocity.x += this->direction.x * acceleration;
@@ -123,9 +123,7 @@ void Player::update(sf::Vector2u windowBounds) {
     if (this->shootTimer < this->shootTimerMax){
         shootTimer++;
     }
-    if (this->damageTimer < this->damageTimerMax){
-        damageTimer++;
-    }
+    //if (this->damageTimer < this->damageTimerMax){damageTimer++;}
 
     // update positions
     this->playerCenter.x = this->sprite.getPosition().x +

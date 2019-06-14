@@ -1,7 +1,7 @@
 // Created by felix on 6/2/2019.
 #include "Enemy.h"
 
-const float ENEMY_SPEED = 4.0f, ENEMY_SCALE = 0.03f;
+const float ENEMY_SPEED = 12.0f, ENEMY_SCALE = 0.03f;
 
 Enemy::Enemy(sf::Texture *texture, sf::Vector2u windowBounds,
              sf::Vector2f position,

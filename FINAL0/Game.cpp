@@ -1,15 +1,14 @@
 // Created by felix on 6/1/2019.
 #include "Game.h"
 
-int ENEMY_TIME_MAX=30; int CURRENT_ENEMY_TIME=0; int ENEMY_COUNTER=0;
-enum textures{PLAYER, BULLET, ENEMY01, ENEMY02};
+int ENEMY_TIME_MAX = 20, CURRENT_ENEMY_TIME = 0, ENEMY_COUNTER = 0;
 enum enem{enemy1,enemy2};
 
 
 Game::Game(sf::RenderWindow *window) {
     this->window = window;
     this->window->setFramerateLimit(60);
-
+    this->score = 0;
     // Init fonts
     this->font.loadFromFile("./fonts/arial.ttf");
 
@@ -51,7 +50,7 @@ void Game::initUI(){
 
         // Init static Text
         scoreText.setFont(font);
-        scoreText.setCharacterSize(14);
+        scoreText.setCharacterSize(24);
         scoreText.setFillColor(sf::Color::White);
         scoreText.setString("Score: ");
 
@@ -74,31 +73,26 @@ void Game::CombatUpdate() {
 }
 
 void Game::update() {
-
     enemyupdate();
     playerupdate();
-
-
-    //cout<<enemies.size()<<endl;
 }
 
 void Game::enemyupdate(){
     CURRENT_ENEMY_TIME++;
-    if(CURRENT_ENEMY_TIME==ENEMY_TIME_MAX){
+    if(CURRENT_ENEMY_TIME == ENEMY_TIME_MAX){
         this->enemies.push_back(Enemy(&enemyTexture,
                 this->window->getSize(),
-                Vector2f(1700.0f,(rand() %10) * 100),
+                Vector2f(this->window->getSize().x,(rand() %10) * 100),
                 Vector2f(-1.0f,0.0f),enemy1 , 10));
-        CURRENT_ENEMY_TIME=0;
+        CURRENT_ENEMY_TIME = 0; // Reset enemy timer appear
     }
     for(int i=0;i<enemies.size();++i){
         this->enemies[i].update(this->window->getSize());
-        if(this->enemies[i].getPosition().x<-100){
+        if(this->enemies[i].getPosition().x < -100){
             ENEMY_COUNTER++;
-            this->enemies.erase(this->enemies.begin()+i);
-
+            this->enemies.erase(this->enemies.begin() + i);
         }
-        if(this->enemies[i].getHP()==0){
+        if(this->enemies[i].getHP() == 0){
             this->score += this->enemies[i].getHPMax();
             this->enemies.erase(this->enemies.begin()+i);
         }
@@ -107,12 +101,9 @@ void Game::enemyupdate(){
 
 void Game::playerupdate(){
     for (int i = 0; i < players.size(); ++i) {
-        // PLAYERS UPDATE
         this->players[i].update(this->window->getSize());
 
-
-        for(int j=0;j<enemies.size();++j) {
-
+        for(int j=0; j<enemies.size(); ++j) {
             if (players[i].getGlobalBounds().intersects(enemies[j].getGlobalBounds())) {
                 enemies.erase(enemies.begin() + j);
                 players[i].takedamage();
@@ -122,42 +113,27 @@ void Game::playerupdate(){
         // Bala update
         for (int k = 0; k < this->players[i].getBulltes().size(); ++k) {
 
-            this->players[i].getBulltes()[k].update();
+            this->players[i].getBulltes()[k].update(); // Permite el movimiento de las balas
 
-            if(players[i].getBulltes()[k].getPosition().x>1700){
-                players[i].getBulltes().erase(players[i].getBulltes().begin()+k);
+            // Bala desaparece al chocar con el borde de la ventana
+            if(players[i].getBulltes()[k].getPosition().x > window->getSize().x){
+                players[i].getBulltes().erase(players[i].getBulltes().begin() + k);
             }
-
-
-
+            // Colision nave con enemigo
             for(int j=0;j<enemies.size();++j){
-
-
                 if(this->players[i].getBulltes()[k].getGlobalBounds().intersects(enemies[j].getGlobalBounds()) ){
-                    enemies[j].takeDamage(10);
-                    players[i].getBulltes().erase(players[i].getBulltes().begin()+k);
-
+                    enemies[j].takeDamage(10); // Enemigo recibe dano al chocar con la bala
+                    players[i].getBulltes().erase(players[i].getBulltes().begin() + k); // Enemigo desaparece al chocar con la bala
                 }
-
-
-
-
             }
-            // Bordes ventana para las balas revisar y modificar
-            //if (this->players[i].getBulltes()[k].getPosition().y <= 0) {
-            //    this->players[i].getBulltes().erase(this->players[k].getBulltes().begin() + k);
-            //    break;// BREAK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            //}
         }
 
         // UI UPDATE
         this->updateUI();
-        this->controlBoundsNave();
+        this->controlBoundsNave(); // Controlar que la nave no se salga de los bordes la ventana
         //cout<<players[i].getBulltes().size()<<endl;
     }
 }
-
-
 
 void Game::drawUI(){
     for (int i = 0; i < this->followPlayerTexts.size(); ++i) {
@@ -167,7 +143,6 @@ void Game::drawUI(){
         this->window->draw(this->staticPlayerTexts[i]);
     }
 }
-
 
 void Game::draw() {
     window->clear();
