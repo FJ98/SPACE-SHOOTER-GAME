@@ -17,6 +17,8 @@ private:
     sf::Font font;
     std::vector<sf::Text> followPlayerTexts;
     std::vector<sf::Text> staticPlayerTexts;
+    sf::Text gameOverText;
+    sf::Text youWinText;
 
     // Players
     std::vector<Player> players;
@@ -56,6 +58,11 @@ public:
 template <typename T>
 void cargar(T& target, std::string path) {
     target.loadFromFile(path);
+}
+
+template <>
+inline void cargar<sf::Music>(sf::Music& target, std::string path) {
+    target.openFromFile(path);
 }
 
 
