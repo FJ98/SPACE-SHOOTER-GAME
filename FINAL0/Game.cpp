@@ -2,20 +2,24 @@
 #include "Game.h"
 
 int ENEMY_TIME_MAX = 20, CURRENT_ENEMY_TIME = 0, ENEMY_COUNTER = 0;
+string T_PLAYER = "./images/nave2.png", T_BULLET = "./images/bala2.png",
+        T_ENEMY = "./images/enemigo02.png", T_FONT="./fonts/arial.ttf",
+        MUSIC_BG = "./sound/background-music.wav";
 enum enem{enemy1,enemy2};
-
+int winScore = 100;
 
 Game::Game(sf::RenderWindow *window) {
     this->window = window;
     this->window->setFramerateLimit(60);
     this->score = 0;
+    
     // Init fonts
-    this->font.loadFromFile("./fonts/arial.ttf");
+    cargar(this->font,T_FONT);
 
     // Init Textures
-    this->playerTexture.loadFromFile("./images/nave2.png");
-    this->bulletTexture.loadFromFile("./images/bala2.png");
-    this->enemyTexture.loadFromFile("./images/enemigo02.png");
+    cargar(this->playerTexture, T_PLAYER);
+    cargar(this->bulletTexture, T_BULLET);
+    cargar(this->enemyTexture, T_ENEMY);
 
     //Init Player
     this->players.push_back(Player(&playerTexture, &bulletTexture)); // Jugador1
@@ -27,8 +31,9 @@ Game::Game(sf::RenderWindow *window) {
     this->initUI();
 
     //Init music
-    cargarMusica(this->music, "./sound/background-music.wav");
+    cargar(this->music, MUSIC_BG);
     music.play();
+    music.setLoop(true);
 }
 
 Game::~Game() {
@@ -37,6 +42,9 @@ Game::~Game() {
 void Game::initUI(){
     sf::Text tempText;
     sf::Text scoreText;
+    sf::Text gameOverText;
+    sf::Text youWinText;
+    
     for (int i = 0; i < this->players.size(); ++i) {
         // Init followText
         tempText.setFont(font);
@@ -45,15 +53,30 @@ void Game::initUI(){
         tempText.setString(std::to_string(i));
 
         this->followPlayerTexts.push_back(sf::Text(tempText));
-
-        // Init static Text
-        scoreText.setFont(font);
-        scoreText.setCharacterSize(24);
-        scoreText.setFillColor(sf::Color::White);
-        scoreText.setString("Score: ");
-
-        this->staticPlayerTexts.push_back(sf::Text(scoreText));
     }
+    
+    // Init static Text
+    scoreText.setFont(font);
+    scoreText.setCharacterSize(14);
+    scoreText.setFillColor(sf::Color::White);
+    scoreText.setString("Score: ");
+    this->staticPlayerTexts.push_back(sf::Text(scoreText));
+
+    // GAME OVER TEXT
+    gameOverText.setFont(font);
+    gameOverText.setCharacterSize(30);
+    gameOverText.setFillColor(sf::Color::Red);
+    gameOverText.setPosition(200.f, 200.f);
+    gameOverText.setString("GAME OVER");
+    this->gameOverText = gameOverText;
+
+    // YOU WIN TEXT
+    youWinText.setFont(font);
+    youWinText.setCharacterSize(40);
+    youWinText.setFillColor(sf::Color::Green);
+    youWinText.setPosition(300.f, 300.f);
+    youWinText.setString("YOU WIN");
+    this->youWinText = youWinText;
 }
 void Game::updateUI() {
     for (int i = 0; i < this->followPlayerTexts.size(); ++i) {
@@ -71,8 +94,12 @@ void Game::CombatUpdate() {
 }
 
 void Game::update() {
-    enemyupdate();
-    playerupdate();
+    if((this->players[0].getHp() > 0) && (this->score < winScore)){
+        enemyupdate();
+        playerupdate();
+    } else {
+        this->music.pause();
+    }
 }
 
 void Game::enemyupdate(){
@@ -146,6 +173,12 @@ void Game::drawUI(){
     for (int i = 0; i < this->staticPlayerTexts.size(); ++i) {
         this->window->draw(this->staticPlayerTexts[i]);
     }
+    // Draw Game over
+    if(this->players[0].getHp() <= 0)
+        this->window->draw(gameOverText);
+    // Draw You Win
+    if(this->score >= winScore)
+        this->window->draw(youWinText);
 }
 
 void Game::draw() {
