@@ -1,5 +1,7 @@
 // Created by felix on 6/2/2019.
 #include "Enemy.h"
+const float ENEMY_SPEED = 5.0f;
+enum eTypes {MOVELEFT, FOLLOW, FOLLOWFAST,FOLLOWSHOOT,FOLLOWFASTSHOOT};
 
 Enemy::Enemy(sf::Texture *texture,  sf::Vector2u windowBounds,
             sf::Vector2f position,
@@ -9,6 +11,9 @@ Enemy::Enemy(sf::Texture *texture,  sf::Vector2u windowBounds,
     this->texture = texture;
     this->sprite.setTexture(*this->texture);
     this->sprite.setScale(scale);
+    this->sprite.setPosition(windowBounds.x - this->sprite.getGlobalBounds().width,
+                             (rand() % windowBounds.y) - this->sprite.getGlobalBounds().height);
+
     this->type = type;
 
     this->hpMax = hpMax;
@@ -33,12 +38,13 @@ void Enemy::takeDamage(int damage) {
 void Enemy::update() {
     switch (this->type) {
         case 0:
-            this->sprite.move(-10.0f,0.0f);
+            this->sprite.move(-ENEMY_SPEED,0.0f);
             break;
         default: break;
     }
 }
 
 void Enemy::draw(sf::RenderTarget &target) {
-
+    target.draw(this->sprite);
 }
+

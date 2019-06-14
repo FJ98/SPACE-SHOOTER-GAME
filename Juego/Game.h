@@ -24,7 +24,16 @@ private:
 
     //Enemies
     std::vector<Enemy> enemies;
+    std::vector<Enemy> enemiesSaved;
+    int enemyAppearTimer;
+    int enemyAppearTimerMax;
+    // MainMenu
+
+    //Musica
+    sf::Music music ;
+
 public:
+    Game();
     Game(sf::RenderWindow *window);
     virtual ~Game();
 
@@ -38,9 +47,15 @@ public:
     void CombatUpdate();
     void update();
     void draw();
-
-
+    void controlBoundsNave();
+    void cargarMusica (sf::Music& target, std::string path);
 };
+
+template <typename T>
+void cargar(T& target, std::string path) {
+    target.loadFromFile(path);
+}
+
 
 
 #endif //JUEGO_GAME_H

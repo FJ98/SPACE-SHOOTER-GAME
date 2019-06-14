@@ -5,6 +5,7 @@ NAVE_MAX_VEL = 25.0f, NAVE_ACCELERATION = 0.8f, NAVE_STABLE = 0.4f;
 const int SHOOT_TIMER_MAX = 10, DAMAGE_TIMER_MAX = 10;
 
 unsigned Player::players = 0;
+
 enum controls{UP, DOWN, LEFT, RIGHT, SHOOT};
 
 Player::Player(sf::Texture *texture, sf::Texture *bulletTexture,
@@ -33,6 +34,7 @@ Player::Player(sf::Texture *texture, sf::Texture *bulletTexture,
     this->acceleration = NAVE_ACCELERATION;
     this->stabilizerForce = NAVE_STABLE;
 
+    // Conteo del numero de jugadores
     this->playerNr = Player::players;
     Player::players++;
 }
@@ -47,6 +49,7 @@ void Player::movement() {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->controls[controls::UP]))){
         this->direction.x = 0.0f;
         this->direction.y = -1.0f;
+        // para acelerar la nave
         if (this->currentVelocity.y > -this->maxVelocity && this->direction.y < 0) {
             this->currentVelocity.y += this->direction.y * acceleration;
         }

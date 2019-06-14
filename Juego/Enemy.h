@@ -7,7 +7,8 @@ class Enemy {
 private:
     sf::Texture *texture;
     sf::Sprite sprite;
-
+    sf::Vector2u windowBounds;
+    sf::Vector2f direction;
     int type;
     int hp;
     int hpMax;
@@ -26,9 +27,10 @@ public:
     inline const int getDamage() const { return rand() % this->damageMax + this->damageMin; }
     inline const int getHP() const { return this->hp; }
     inline const int getHPMax() const { return this->hpMax; }
-    inline const bool isDamage() const { return this->hp <= 0; }
-    //inline const sf::FloatRect& getGlobalBounds() const { return this->sprite.getGlobalBounds(); }
-    //inline const sf::Vector2f& getPosition() const { return this->sprite.getPosition(); }
+    inline const bool isDead() const { return this->hp <= 0; }
+    inline sf::Sprite &getSprite() { return this->sprite;}
+    inline sf::FloatRect getGlobalBounds() const { return this->sprite.getGlobalBounds(); }
+    inline sf::Vector2f getPosition() const { return this->sprite.getPosition(); }
 
     //Funciones
     void takeDamage(int damage);
