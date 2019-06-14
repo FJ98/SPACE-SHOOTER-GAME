@@ -10,32 +10,33 @@ Instructiones para obtener una copia del proyecto y poder correrlo en tu computa
 ### Prerequisitos
 **Instalar SFML**
 - [SFML](https://www.sfml-dev.org/) En Ubuntu se puede instalar SFML con el siguiente comando:
-```bash
+```
 sudo apt-get install libsfml-dev
 ```
-
-**Para unir SFML con Clion seguir el siguiente tutorial:** 
-- [Como linkear SFML con Clion](https://github.com/FJ98/Galaga/blob/master/Como%20linkear%20SFML%20con%20Clion.pdf) <br/>
-
 **Asegurate de tener instalado g++**
 - [g++](https://linuxconfig.org/how-to-install-g-the-c-compiler-on-ubuntu-18-04-bionic-beaver-linux)
-En Ubuntu se puede instalar g++ con el siguiente comando:
+En linux se puede instalar g++ con el siguiente comando:
 ```
 sudo apt-get install g++
 ```
 
+**Para unir SFML con Clion seguir el siguiente tutorial:(Para Windows y Linux)** 
+- [Como linkear SFML con Clion](https://github.com/FJ98/Galaga/blob/master/Como%20linkear%20SFML%20con%20Clion.pdf) <br/>
+
 **Ejecución del juego**
+1. Abrir el Git Bash y descargar el git con el siguiente comando:
 ```
 git clone https://github.com/FJ98/Galaga.git
-cd Galaga
-bash run.sh
-./Galaga.out
 ```
+2. Entrar a CLion y abrir la carpeta descargada
+3. Seguir este tutorial para linkear SFML con Clion: 
+[Como linkear SFML con Clion](https://github.com/FJ98/Galaga/blob/master/Como%20linkear%20SFML%20con%20Clion.pdf) <br/>
+4. Correr el juego desde Clion
 
 ## Estilos seguidos para escribir del codigo
 
-1. Estilo seguido para el nombre de cada class: **PascalCase**
-2. Estilo seguido para el nombre de las funciones y las variables: **camelCase**
+1. Nombre de cada clase: **PascalCase**
+2. Nombre de las funciones y las variables: **camelCase**
 3. Estilo de Indentacion: [K & R style - Variant: Stroustrup](https://en.wikipedia.org/wiki/Indentation_style#Variant:_Stroustrup)
 4. Si una linea es muy ancha separarla a criterio propio
 
