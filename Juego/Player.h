@@ -46,17 +46,19 @@ private:
 public:
     /* Player(sf::Texture *texture); */
     Player(sf::Texture *texture, sf::Texture *bulletTexture,
-            int UP = 22,int DOWN = 18,
-            int LEFT = 0, int RIGHT = 3, int SHOOT = 57);
+           int UP = 22,int DOWN = 18,
+           int LEFT = 0, int RIGHT = 3, int SHOOT = 57);
     virtual ~Player();
 
     //Accesos
     inline std::vector<Bullet>& getBulltes(){return this->bullets;}
     inline const sf::Vector2f& getPosition() const {return this->sprite.getPosition();}
     inline const  sf::String getHpAsString() const {return std::to_string(this->hp) + "/" + std::to_string(this->hpMax);}
-    inline sf::Sprite &getSprite(){return this->sprite;}
+    inline FloatRect  getGlobalBounds() const {return this->sprite.getGlobalBounds();}
+    inline sf::Sprite &getSprite() {return this->sprite ;}
 
     //Funciones
+    void takedamage();
     void combat();
     void movement();
     void update(sf::Vector2u windowBounds);

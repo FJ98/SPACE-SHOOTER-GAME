@@ -93,8 +93,8 @@ CMakeFiles/SFMLApp.dir/Bullet.cpp.obj
  C:/SFML-2.5.1/include/SFML/Window/Window.hpp
  C:/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  C:/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/felix/Downloads/Codigo/Juego/Bullet.cpp
- C:/Users/felix/Downloads/Codigo/Juego/Bullet.h
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Bullet.cpp
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Bullet.h
 CMakeFiles/SFMLApp.dir/Enemy.cpp.obj
  C:/SFML-2.5.1/include/SFML/Audio.hpp
  C:/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -187,9 +187,9 @@ CMakeFiles/SFMLApp.dir/Enemy.cpp.obj
  C:/SFML-2.5.1/include/SFML/Window/Window.hpp
  C:/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  C:/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/felix/Downloads/Codigo/Juego/Bullet.h
- C:/Users/felix/Downloads/Codigo/Juego/Enemy.cpp
- C:/Users/felix/Downloads/Codigo/Juego/Enemy.h
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Bullet.h
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Enemy.cpp
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Enemy.h
 CMakeFiles/SFMLApp.dir/Game.cpp.obj
  C:/SFML-2.5.1/include/SFML/Audio.hpp
  C:/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -282,11 +282,11 @@ CMakeFiles/SFMLApp.dir/Game.cpp.obj
  C:/SFML-2.5.1/include/SFML/Window/Window.hpp
  C:/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  C:/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/felix/Downloads/Codigo/Juego/Bullet.h
- C:/Users/felix/Downloads/Codigo/Juego/Enemy.h
- C:/Users/felix/Downloads/Codigo/Juego/Game.cpp
- C:/Users/felix/Downloads/Codigo/Juego/Game.h
- C:/Users/felix/Downloads/Codigo/Juego/Player.h
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Bullet.h
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Enemy.h
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Game.cpp
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Game.h
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Player.h
 CMakeFiles/SFMLApp.dir/Player.cpp.obj
  C:/SFML-2.5.1/include/SFML/Audio.hpp
  C:/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -379,9 +379,9 @@ CMakeFiles/SFMLApp.dir/Player.cpp.obj
  C:/SFML-2.5.1/include/SFML/Window/Window.hpp
  C:/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  C:/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/felix/Downloads/Codigo/Juego/Bullet.h
- C:/Users/felix/Downloads/Codigo/Juego/Player.cpp
- C:/Users/felix/Downloads/Codigo/Juego/Player.h
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Bullet.h
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Player.cpp
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Player.h
 CMakeFiles/SFMLApp.dir/main.cpp.obj
  C:/SFML-2.5.1/include/SFML/Audio.hpp
  C:/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -474,8 +474,8 @@ CMakeFiles/SFMLApp.dir/main.cpp.obj
  C:/SFML-2.5.1/include/SFML/Window/Window.hpp
  C:/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  C:/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
- C:/Users/felix/Downloads/Codigo/Juego/Bullet.h
- C:/Users/felix/Downloads/Codigo/Juego/Enemy.h
- C:/Users/felix/Downloads/Codigo/Juego/Game.h
- C:/Users/felix/Downloads/Codigo/Juego/Player.h
- C:/Users/felix/Downloads/Codigo/Juego/main.cpp
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Bullet.h
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Enemy.h
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Game.h
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Player.h
+ C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/main.cpp

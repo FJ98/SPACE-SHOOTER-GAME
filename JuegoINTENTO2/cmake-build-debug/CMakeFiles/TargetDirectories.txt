@@ -1,3 +1,3 @@
-C:/Users/felix/Downloads/Codigo/Juego/cmake-build-debug/CMakeFiles/SFMLApp.dir
-C:/Users/felix/Downloads/Codigo/Juego/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/felix/Downloads/Codigo/Juego/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/cmake-build-debug/CMakeFiles/SFMLApp.dir
+C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

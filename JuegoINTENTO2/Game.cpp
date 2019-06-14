@@ -1,11 +1,10 @@
 // Created by felix on 6/1/2019.
 #include "Game.h"
 
-int ENEMY_TIME_MAX=30;
-int CURRENT_ENEMY_TIME=0;
-int ENEMY_COUNTER=0;
+int ENEMY_TIME_MAX=30; int CURRENT_ENEMY_TIME=0; int ENEMY_COUNTER=0;
 enum textures{PLAYER, BULLET, ENEMY01, ENEMY02};
 enum enem{enemy1,enemy2};
+
 
 Game::Game(sf::RenderWindow *window) {
     this->window = window;
@@ -29,6 +28,10 @@ Game::Game(sf::RenderWindow *window) {
 
     //Init UI
     this->initUI();
+
+    //Init music
+    cargarMusica(this->music, "./sound/background-music.wav");
+    music.play();
 }
 
 Game::~Game() {
@@ -83,7 +86,7 @@ void Game::enemyupdate(){
         this->enemies.push_back(Enemy(&enemyTexture,
                 this->window->getSize(),
                 Vector2f(1700.0f,(rand() %10) * 100),
-                Vector2f(-1.0f,0.0f),enemy1 , 30));
+                Vector2f(-1.0f,0.0f),enemy1 , 10));
         CURRENT_ENEMY_TIME=0;
     }
     for(int i=0;i<enemies.size();++i){
@@ -189,4 +192,8 @@ void Game::controlBoundsNave() {
             this->players[i].getSprite().setPosition(this->players[i].getSprite().getPosition().x, window->getSize().y - this->players[i].getSprite().getGlobalBounds().height);
         }
     }
+}
+
+void Game::cargarMusica (sf::Music& target, const std::string& path) {
+    target.openFromFile(path);
 }

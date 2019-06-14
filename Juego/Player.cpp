@@ -1,15 +1,14 @@
 // Created by felix on 6/1/2019.
 #include "Player.h"
-const float NAVE_SPEED = 4.0f, NAVE_SCALE = 0.05f,
-NAVE_MAX_VEL = 25.0f, NAVE_ACCELERATION = 0.8f, NAVE_STABLE = 0.4f;
-const int SHOOT_TIMER_MAX = 10, DAMAGE_TIMER_MAX = 10;
+const float NAVE_SPEED = 4.0f, NAVE_SCALE = 0.07f,
+        NAVE_MAX_VEL = 25.0f, NAVE_ACCELERATION = 0.8f, NAVE_STABLE = 0.4f;
+const int SHOOT_TIMER_MAX = 15, DAMAGE_TIMER_MAX = 10;
 
 unsigned Player::players = 0;
-
 enum controls{UP, DOWN, LEFT, RIGHT, SHOOT};
 
 Player::Player(sf::Texture *texture, sf::Texture *bulletTexture,
-        int UP,int DOWN, int LEFT, int RIGHT, int SHOOT) :
+               int UP,int DOWN, int LEFT, int RIGHT, int SHOOT) :
         level{1}, exp{0}, expNext{100}, hp{10},
         hpMax{10},damage{1},damageMax{2},score{0}
 {
@@ -17,7 +16,7 @@ Player::Player(sf::Texture *texture, sf::Texture *bulletTexture,
     this->bulletTexture = bulletTexture;
     this->sprite.setTexture(*this->texture);
     this->sprite.setScale(NAVE_SCALE,NAVE_SCALE);
-    //this->sprite.setPosition(300.0f, 800.0f);
+    this->sprite.setPosition(300.0f, 800.0f);
 
     this->shootTimerMax = SHOOT_TIMER_MAX;
     this->shootTimer = this->shootTimerMax;
@@ -34,7 +33,6 @@ Player::Player(sf::Texture *texture, sf::Texture *bulletTexture,
     this->acceleration = NAVE_ACCELERATION;
     this->stabilizerForce = NAVE_STABLE;
 
-    // Conteo del numero de jugadores
     this->playerNr = Player::players;
     Player::players++;
 }
@@ -49,7 +47,6 @@ void Player::movement() {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->controls[controls::UP]))){
         this->direction.x = 0.0f;
         this->direction.y = -1.0f;
-        // para acelerar la nave
         if (this->currentVelocity.y > -this->maxVelocity && this->direction.y < 0) {
             this->currentVelocity.y += this->direction.y * acceleration;
         }
@@ -112,9 +109,13 @@ void Player::combat() {
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Key(this->controls[controls::SHOOT]))
         && this->shootTimer >= this->shootTimerMax){
         this->bullets.push_back( Bullet(bulletTexture, this->playerCenter,
-                sf::Vector2f(BALA_DIRX,BALA_DIRY), BALA_INIT_VEL, BALA_MAX_VEL, BALA_ACCEL));
+                                        sf::Vector2f(BALA_DIRX,BALA_DIRY), BALA_INIT_VEL, BALA_MAX_VEL, BALA_ACCEL));
         this->shootTimer = 0; // RESET TIMER
     }
+}
+
+void Player::takedamage() {
+    this->hp--;
 }
 
 void Player::update(sf::Vector2u windowBounds) {
@@ -128,9 +129,9 @@ void Player::update(sf::Vector2u windowBounds) {
 
     // update positions
     this->playerCenter.x = this->sprite.getPosition().x +
-            this->sprite.getGlobalBounds().width;
+                           this->sprite.getGlobalBounds().width;
     this->playerCenter.y = this->sprite.getPosition().y +
-            this->sprite.getGlobalBounds().height / 2;
+                           this->sprite.getGlobalBounds().height / 2;
 
     this->movement();
     this->combat();
@@ -142,5 +143,3 @@ void Player::draw(sf::RenderTarget &target) {
         this->bullets[i].draw(target);
     }
 }
-
-

@@ -20,11 +20,11 @@ int main() {
             }
 
         }
-        //game->update();
-        std::thread t1(&Game::enemyupdate, game);
-        std::thread t2(&Game::playerupdate, game);
-        t1.join();
-        t2.join();
+        game->update();
+        //std::thread t1(&Game::enemyupdate, game);
+        //std::thread t2(&Game::playerupdate, game);
+        //t1.join();
+        //t2.join();
 
         game->draw();
     }

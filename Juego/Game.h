@@ -4,11 +4,14 @@
 
 #include "Player.h"
 #include "Enemy.h"
+
 class Game {
 private:
     sf::RenderWindow *window;
-
+    // std::thread first;
+    //std::thread second;
     // Texto
+
     sf::Font font;
     std::vector<sf::Text> followPlayerTexts;
     std::vector<sf::Text> staticPlayerTexts;
@@ -24,16 +27,10 @@ private:
 
     //Enemies
     std::vector<Enemy> enemies;
-    std::vector<Enemy> enemiesSaved;
-    int enemyAppearTimer;
-    int enemyAppearTimerMax;
-    // MainMenu
 
-    //Musica
     sf::Music music ;
 
 public:
-    Game();
     Game(sf::RenderWindow *window);
     virtual ~Game();
 
@@ -41,6 +38,8 @@ public:
     inline sf::RenderWindow& getWindow(){return *this->window;}
 
     //Funciones
+    void enemyupdate();
+    void playerupdate();
     void initUI();
     void updateUI();
     void drawUI();
@@ -48,11 +47,12 @@ public:
     void update();
     void draw();
     void controlBoundsNave();
-    void cargarMusica (sf::Music& target, std::string path);
+    void cargarMusica (sf::Music& target, const std::string& path);
+
 };
 
 template <typename T>
-void cargar(T& target, std::string path) { 
+void cargar(T& target, std::string path) {
     target.loadFromFile(path);
 }
 

@@ -4,11 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/felix/Downloads/Codigo/Juego/Bullet.cpp" "C:/Users/felix/Downloads/Codigo/Juego/cmake-build-debug/CMakeFiles/SFMLApp.dir/Bullet.cpp.obj"
-  "C:/Users/felix/Downloads/Codigo/Juego/Enemy.cpp" "C:/Users/felix/Downloads/Codigo/Juego/cmake-build-debug/CMakeFiles/SFMLApp.dir/Enemy.cpp.obj"
-  "C:/Users/felix/Downloads/Codigo/Juego/Game.cpp" "C:/Users/felix/Downloads/Codigo/Juego/cmake-build-debug/CMakeFiles/SFMLApp.dir/Game.cpp.obj"
-  "C:/Users/felix/Downloads/Codigo/Juego/Player.cpp" "C:/Users/felix/Downloads/Codigo/Juego/cmake-build-debug/CMakeFiles/SFMLApp.dir/Player.cpp.obj"
-  "C:/Users/felix/Downloads/Codigo/Juego/main.cpp" "C:/Users/felix/Downloads/Codigo/Juego/cmake-build-debug/CMakeFiles/SFMLApp.dir/main.cpp.obj"
+  "C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Bullet.cpp" "C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/cmake-build-debug/CMakeFiles/SFMLApp.dir/Bullet.cpp.obj"
+  "C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Enemy.cpp" "C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/cmake-build-debug/CMakeFiles/SFMLApp.dir/Enemy.cpp.obj"
+  "C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Game.cpp" "C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/cmake-build-debug/CMakeFiles/SFMLApp.dir/Game.cpp.obj"
+  "C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/Player.cpp" "C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/cmake-build-debug/CMakeFiles/SFMLApp.dir/Player.cpp.obj"
+  "C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/main.cpp" "C:/Users/felix/Downloads/Codigo/JuegoINTENTO2/cmake-build-debug/CMakeFiles/SFMLApp.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
