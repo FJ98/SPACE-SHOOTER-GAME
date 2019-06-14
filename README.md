@@ -1,10 +1,10 @@
-# Galaga
+# Juego de Disparos
 
 ## Diagrama de Clases del Proyecto
 - [UML](https://github.com/FJ98/Galaga/blob/master/UML-Galaga.pdf)
 El proyecto fue probado en Ubuntu 18.04.1 LTS
 
-## Ejecutar Galaga
+## Ejecutar Juego de Disparos
 Instructiones para obtener una copia del proyecto y poder correrlo en tu computadora.
 
 ### Prerequisitos
@@ -56,6 +56,7 @@ bash run.sh
 
 ### Autor
 **Felix Jesus Solano Vergara - Facultad de Ciencias de la Computacion - Universidad de Ingenieria y Tecnologia (UTEC) - Barranco, Lima - Peru (2019)**
+
 **Jeanlee Barreto - Facultad de Ciencias de la Computacion - Universidad de Ingenieria y Tecnologia (UTEC) - Barranco, Lima - Peru (2019)**
 
 
