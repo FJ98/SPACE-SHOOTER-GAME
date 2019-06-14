@@ -15,7 +15,7 @@ Bullet::Bullet(sf::Texture *texture,sf::Vector2f position,
     this->acceleration = acceleration;
     this->direction = direction;
     this->sprite.setPosition(sf::Vector2f(
-            position.x - this->sprite.getGlobalBounds().width/2,
+            position.x - this->sprite.getGlobalBounds().width / 2,
             position.y - this->sprite.getGlobalBounds().height / 2)); // Revisar
 }
 

@@ -23,8 +23,6 @@ Game::Game(sf::RenderWindow *window) {
     //this->players.push_back(Player(&playerTexture, &bulletTexture,sf::Keyboard::I,
     //        sf::Keyboard::K, sf::Keyboard::J,sf::Keyboard::L, sf::Keyboard::M));// Jugador2
 
-    // Init Enemy
-
     //Init UI
     this->initUI();
 
@@ -80,15 +78,17 @@ void Game::update() {
 void Game::enemyupdate(){
     CURRENT_ENEMY_TIME++;
     if(CURRENT_ENEMY_TIME == ENEMY_TIME_MAX){
+        // Hacer que aprezcan enemigos cada cierto tiempo
         this->enemies.push_back(Enemy(&enemyTexture,
                 this->window->getSize(),
                 Vector2f(this->window->getSize().x,(rand() %10) * 100),
                 Vector2f(-1.0f,0.0f),enemy1 , 10));
         CURRENT_ENEMY_TIME = 0; // Reset enemy timer appear
     }
-    for(int i=0;i<enemies.size();++i){
+
+    for(int i=0; i < enemies.size(); ++i){
         this->enemies[i].update(this->window->getSize());
-        if(this->enemies[i].getPosition().x < -100){
+        if(this->enemies[i].getPosition().x < 0){
             ENEMY_COUNTER++;
             this->enemies.erase(this->enemies.begin() + i);
         }
@@ -101,12 +101,14 @@ void Game::enemyupdate(){
 
 void Game::playerupdate(){
     for (int i = 0; i < players.size(); ++i) {
+        //
         this->players[i].update(this->window->getSize());
 
+        // Colision nave con enemigo
         for(int j=0; j<enemies.size(); ++j) {
             if (players[i].getGlobalBounds().intersects(enemies[j].getGlobalBounds())) {
-                enemies.erase(enemies.begin() + j);
-                players[i].takedamage();
+                enemies.erase(enemies.begin() + j); // Se borra el enemigo al chocar con la nave
+                players[i].takedamage(); // La nave recibe dano al chocar con la el enemigo
             }
         }
 
@@ -119,7 +121,7 @@ void Game::playerupdate(){
             if(players[i].getBulltes()[k].getPosition().x > window->getSize().x){
                 players[i].getBulltes().erase(players[i].getBulltes().begin() + k);
             }
-            // Colision nave con enemigo
+            // Colision balas de la nave con enemigo
             for(int j=0;j<enemies.size();++j){
                 if(this->players[i].getBulltes()[k].getGlobalBounds().intersects(enemies[j].getGlobalBounds()) ){
                     enemies[j].takeDamage(10); // Enemigo recibe dano al chocar con la bala
@@ -136,9 +138,11 @@ void Game::playerupdate(){
 }
 
 void Game::drawUI(){
+    // Draw texto que sigue al jugador
     for (int i = 0; i < this->followPlayerTexts.size(); ++i) {
         this->window->draw(this->followPlayerTexts[i]);
     }
+    // Draw texto estatico (ejemplo: el Score)
     for (int i = 0; i < this->staticPlayerTexts.size(); ++i) {
         this->window->draw(this->staticPlayerTexts[i]);
     }
@@ -146,15 +150,15 @@ void Game::drawUI(){
 
 void Game::draw() {
     window->clear();
-
+    // Dibujar al jugador
     for (int i = 0; i < this->players.size(); ++i) {
         this->players[i].draw(*this->window);
     }
+    // Dibujar al enemigo
     for(int i=0;i<this->enemies.size();++i){
         this->enemies[i].draw(*this->window);
     }
-    this->drawUI();
-
+    this->drawUI(); // Dibujar todos los textos (Interfaz Grafica)
 
     window->display();
 }

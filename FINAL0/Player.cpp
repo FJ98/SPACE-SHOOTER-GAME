@@ -125,14 +125,14 @@ void Player::update(sf::Vector2u windowBounds) {
     }
     //if (this->damageTimer < this->damageTimerMax){damageTimer++;}
 
-    // update positions
+    // Para que la bala salga del centro de la nave
     this->playerCenter.x = this->sprite.getPosition().x +
             this->sprite.getGlobalBounds().width;
     this->playerCenter.y = this->sprite.getPosition().y +
             this->sprite.getGlobalBounds().height / 2;
 
-    this->movement();
-    this->combat();
+    this->movement(); // movimento de la nave
+    this->combat(); // disparos de la nave
 }
 
 void Player::draw(sf::RenderTarget &target) {

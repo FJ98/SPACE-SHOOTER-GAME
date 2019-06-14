@@ -850,6 +850,10 @@ SFML/Config.hpp
 
 C:/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+C:/Users/felix/GitHubs/Galaga/FINAL0/Bullet.cpp
+Bullet.h
+C:/Users/felix/GitHubs/Galaga/FINAL0/Bullet.h
+
 C:/Users/felix/GitHubs/Galaga/FINAL0/Bullet.h
 SFML/Graphics.hpp
 -
@@ -879,6 +883,10 @@ Player.h
 C:/Users/felix/GitHubs/Galaga/FINAL0/Player.h
 Enemy.h
 C:/Users/felix/GitHubs/Galaga/FINAL0/Enemy.h
+
+C:/Users/felix/GitHubs/Galaga/FINAL0/Player.cpp
+Player.h
+C:/Users/felix/GitHubs/Galaga/FINAL0/Player.h
 
 C:/Users/felix/GitHubs/Galaga/FINAL0/Player.h
 Bullet.h
