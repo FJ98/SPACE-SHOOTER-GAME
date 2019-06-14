@@ -33,26 +33,11 @@ bash run.sh
 ```
 
 ## Estilos seguidos para escribir del codigo
-1. Poner tab como 2 espacios en tu editor (para que se vea bien cuando lo subas
-   a github)
-2. Estilo seguido para el nombre de cada class: **PascalCase**
-3. Estilo seguido para el nombre de las funciones y las variables: **camelCase**
-4. Estilo de Indentacion: [K & R style - Variant: Stroustrup](https://en.wikipedia.org/wiki/Indentation_style#Variant:_Stroustrup)
-5. Entre llamados a estructuras de repeticion, de control, operadores,
-   parentesis, asignacion, definicion de funcion (donde veas necesario)
-   poner 1 espacio. Por ejemplo:
-   
-```c++
-  void foo () { return 1; }
 
-  void myFunction (int a, int b) {
-    for (int i = a; i <= b; i++) {
-      if (a % 2 == 0) foo();
-    }
-  }
-
-```
-6. Si una linea es muy ancha separarla a criterio propio
+1. Estilo seguido para el nombre de cada class: **PascalCase**
+2. Estilo seguido para el nombre de las funciones y las variables: **camelCase**
+3. Estilo de Indentacion: [K & R style - Variant: Stroustrup](https://en.wikipedia.org/wiki/Indentation_style#Variant:_Stroustrup)
+4. Si una linea es muy ancha separarla a criterio propio
 
 ### Autor
 **Felix Jesus Solano Vergara - Facultad de Ciencias de la Computacion - Universidad de Ingenieria y Tecnologia (UTEC) - Barranco, Lima - Peru (2019)**
