@@ -1,7 +1,7 @@
 #include "Game.h"
 #include <stdlib.h>
 #include <thread>
-const int WIDTH = 1600, HEIGHT = 900;
+
 
 int main() {
 
@@ -21,8 +21,8 @@ int main() {
 
         }
         game->update();
-        //std::thread t1(&Game::enemyupdate, game);
-        //std::thread t2(&Game::playerupdate, game);
+        //std::thread t1(&Game::enemyUpdate, game);
+        //std::thread t2(&Game::playerUpdate, game);
         //t1.join();
         //t2.join();
 

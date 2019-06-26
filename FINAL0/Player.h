@@ -6,68 +6,47 @@
 
 class Player {
 private:
-    unsigned playerNr;
+    sf::Sprite sprite;
+    sf::Texture *texture;
+    int hp; int hpMax;
 
     sf::Vector2f playerCenter;
-
-    int shootTimer;
-    int shootTimerMax;
-
-    int damageTimer;
-    int damageTimerMax;
-
-    sf::Sprite sprite;
-    sf::RectangleShape hitBox;
-    sf::Texture *texture;
 
     sf::Texture *bulletTexture;
     std::vector<Bullet> bullets;
 
-    int controls[5];
+    std::array<int, 5> controls;
 
     sf::Vector2f currentVelocity;
-    float maxVelocity;
-    float acceleration;
+    float maxVelocity; float acceleration;
     sf::Vector2f direction;
     float stabilizerForce;
 
-    int level;
-    int exp;
-    int expNext;
-
-    int hp;
-    int hpMax;
-
-    int damage;
-    int damageMax;
-
+    int shootTimer; int shootTimerMax;
     int score;
 
 public:
-    /* Player(sf::Texture *texture); */
     Player(sf::Texture *texture, sf::Texture *bulletTexture,
-            int UP = 22,int DOWN = 18,
-            int LEFT = 0, int RIGHT = 3, int SHOOT = 57);
-    virtual ~Player();
+            std::array<int,5> controls);
+    virtual ~Player() = default;
 
-    //Accesos
-    inline std::vector<Bullet>& getBulltes(){return this->bullets;}
-    inline const sf::Vector2f& getPosition() const {return this->sprite.getPosition();}
-    inline int getHp() { return this->hp; }
+    //Access
+    inline std::vector<Bullet>& getBullets(){return this->bullets;}
     inline const  sf::String getHpAsString() const {return std::to_string(this->hp) + "/" + std::to_string(this->hpMax);}
+
+    inline int getHp() { return this->hp; }
     inline FloatRect  getGlobalBounds() const {return this->sprite.getGlobalBounds();}
+    inline const sf::Vector2f& getPosition() const {return this->sprite.getPosition();}
     inline sf::Sprite &getSprite() {return this->sprite ;}
 
-    //Funciones
-    void takedamage();
+    //Functions
     void combat();
     void movement();
-    void update(sf::Vector2u windowBounds);
+
+    void takeDamage();
+    void update();
     void draw(sf::RenderTarget &target);
 
-
-    //statics
-    static unsigned players;
 };
 
 

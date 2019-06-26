@@ -95,6 +95,7 @@ CMakeFiles/SFMLApp.dir/Bullet.cpp.obj
  C:/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
  C:/Users/felix/GitHubs/Galaga/FINAL0/Bullet.cpp
  C:/Users/felix/GitHubs/Galaga/FINAL0/Bullet.h
+ C:/Users/felix/GitHubs/Galaga/FINAL0/Config.h
 CMakeFiles/SFMLApp.dir/Enemy.cpp.obj
  C:/SFML-2.5.1/include/SFML/Audio.hpp
  C:/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -188,6 +189,7 @@ CMakeFiles/SFMLApp.dir/Enemy.cpp.obj
  C:/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  C:/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
  C:/Users/felix/GitHubs/Galaga/FINAL0/Bullet.h
+ C:/Users/felix/GitHubs/Galaga/FINAL0/Config.h
  C:/Users/felix/GitHubs/Galaga/FINAL0/Enemy.cpp
  C:/Users/felix/GitHubs/Galaga/FINAL0/Enemy.h
 CMakeFiles/SFMLApp.dir/Game.cpp.obj
@@ -283,6 +285,7 @@ CMakeFiles/SFMLApp.dir/Game.cpp.obj
  C:/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  C:/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
  C:/Users/felix/GitHubs/Galaga/FINAL0/Bullet.h
+ C:/Users/felix/GitHubs/Galaga/FINAL0/Config.h
  C:/Users/felix/GitHubs/Galaga/FINAL0/Enemy.h
  C:/Users/felix/GitHubs/Galaga/FINAL0/Game.cpp
  C:/Users/felix/GitHubs/Galaga/FINAL0/Game.h
@@ -380,6 +383,7 @@ CMakeFiles/SFMLApp.dir/Player.cpp.obj
  C:/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  C:/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
  C:/Users/felix/GitHubs/Galaga/FINAL0/Bullet.h
+ C:/Users/felix/GitHubs/Galaga/FINAL0/Config.h
  C:/Users/felix/GitHubs/Galaga/FINAL0/Player.cpp
  C:/Users/felix/GitHubs/Galaga/FINAL0/Player.h
 CMakeFiles/SFMLApp.dir/main.cpp.obj
@@ -475,6 +479,7 @@ CMakeFiles/SFMLApp.dir/main.cpp.obj
  C:/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
  C:/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
  C:/Users/felix/GitHubs/Galaga/FINAL0/Bullet.h
+ C:/Users/felix/GitHubs/Galaga/FINAL0/Config.h
  C:/Users/felix/GitHubs/Galaga/FINAL0/Enemy.h
  C:/Users/felix/GitHubs/Galaga/FINAL0/Game.h
  C:/Users/felix/GitHubs/Galaga/FINAL0/Player.h

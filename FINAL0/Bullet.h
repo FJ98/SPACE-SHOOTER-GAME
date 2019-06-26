@@ -2,41 +2,29 @@
 #ifndef JUEGO_BULLET_H
 #define JUEGO_BULLET_H
 
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Audio.hpp>
-#include <iostream>
-#include <vector>
-#include <cstdlib>
-#include <random>
-
-using namespace sf; using namespace std;
-
-const float BALA_DIRX = 1.0f, BALA_DIRY = 0.0f,
-BALA_INIT_VEL = 2.0f, BALA_MAX_VEL = 50.0f, BALA_ACCEL = 1.0f;
+#include "Config.h"
 
 class Bullet {
 private:
     sf::Texture *texture;
     sf::Sprite sprite;
 
-    sf::Vector2f currentVelocity;
-    float initialVelocity;
-    float maxVelocity;
-    float acceleration;
+    float initialVelocity; float maxVelocity;
+    sf::Vector2f currentVelocity; float acceleration;
+
     sf::Vector2f direction;
 
 public:
     Bullet( sf::Texture *texture,sf::Vector2f position,
             sf::Vector2f direction,float initialVelocity,
             float maxVelocity,float acceleration);
-    virtual ~Bullet();
+    virtual ~Bullet() = default;
 
-    //Accesos
+    //Access
     inline const sf::FloatRect getGlobalBounds() const {return this->sprite.getGlobalBounds();}
     inline const sf::Vector2f getPosition() const {return this->sprite.getPosition();}
 
-    //Funciones
+    //Functions
     void movement();
     void update();
     void draw(sf::RenderTarget &target);
