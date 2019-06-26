@@ -2,7 +2,7 @@
 
 ## Diagrama de Clases del Proyecto
 - [UML](https://github.com/FJ98/Galaga/blob/master/UML-Galaga.pdf)
-El proyecto fue probado en Ubuntu 18.04.1 LTS
+El proyecto fue probado en Windows 10
 
 ## Ejecutar Juego de Disparos
 Instructiones para obtener una copia del proyecto y poder correrlo en tu computadora.
