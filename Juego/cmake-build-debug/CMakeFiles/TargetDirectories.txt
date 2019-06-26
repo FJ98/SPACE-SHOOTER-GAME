@@ -1,3 +1,0 @@
-C:/Users/felix/GitHubs/Galaga/Juego/cmake-build-debug/CMakeFiles/SFMLApp.dir
-C:/Users/felix/GitHubs/Galaga/Juego/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/felix/GitHubs/Galaga/Juego/cmake-build-debug/CMakeFiles/rebuild_cache.dir
