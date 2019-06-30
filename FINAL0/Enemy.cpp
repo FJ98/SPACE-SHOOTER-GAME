@@ -10,6 +10,7 @@ Enemy::Enemy(sf::Texture *texture, sf::Vector2f position, int type, int hpMax){
 
     this->hpMax = hpMax;
     this->hp = this->hpMax;
+
 }
 
 void Enemy::takeDamage(int damage) {

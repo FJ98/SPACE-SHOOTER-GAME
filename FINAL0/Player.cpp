@@ -75,6 +75,7 @@ void Player::movement() {
         if (this->currentVelocity.y < 0){
             this->currentVelocity.y = 0;
         }
+
     }
     // ARRIBA
     else if (this->currentVelocity.y < 0){
