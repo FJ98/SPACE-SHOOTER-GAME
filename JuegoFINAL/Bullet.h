@@ -13,16 +13,13 @@ private:
     float initialVelocity, maxVelocity;
 
     sf::Vector2f direction;
-
 public:
     Bullet( sf::Texture *texture,sf::Vector2f position,
             sf::Vector2f direction,float initialVelocity,
             float maxVelocity,float acceleration);
-
     //Accesos
     inline const sf::FloatRect getGlobalBounds() const {return this->sprite.getGlobalBounds();}
     inline const sf::Vector2f getPosition() const {return this->sprite.getPosition();}
-
     //Funciones
     void movement();
     void update();

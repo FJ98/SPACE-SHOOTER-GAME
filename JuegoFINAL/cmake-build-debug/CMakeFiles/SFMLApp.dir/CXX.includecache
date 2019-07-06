@@ -850,6 +850,10 @@ SFML/Config.hpp
 
 C:/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Bullet.h
+Config.h
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Config.h
+
 C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Config.h
 SFML/Graphics.hpp
 -
@@ -870,13 +874,43 @@ algorithm
 Funciones.h
 C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Funciones.h
 
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Enemy.h
+Entity.h
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Entity.h
+Bullet.h
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Bullet.h
+
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Entity.h
+Config.h
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Config.h
+
 C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Funciones.h
 
-C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Menu.cpp
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Game.cpp
+Game.h
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Game.h
+
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Game.h
+Player.h
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Player.h
+Enemy.h
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Enemy.h
 Menu.h
 C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Menu.h
 
 C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Menu.h
 Config.h
 C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Config.h
+
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Player.h
+Entity.h
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Entity.h
+Bullet.h
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Bullet.h
+
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/main.cpp
+Game.h
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Game.h
+thread
+-
 

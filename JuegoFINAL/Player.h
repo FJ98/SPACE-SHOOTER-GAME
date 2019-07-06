@@ -24,17 +24,14 @@ private:
     float stabilizerForce;
 
     int shootTimer; int shootTimerMax;
-
-
 public:
     Player(sf::Texture *texture, sf::Texture *bulletTexture,
            std::array<int,5> controls);
     ~Player() = default;
-
+    //ACCESOS
     inline std::vector<Bullet>& getBullets(){return this->bullets;}
     inline const  sf::String getHpAsString() const {return std::to_string(this->hp) + "/" + std::to_string(this->hpMax);}
     inline sf::Sprite &getSprite() {return this->sprite;}
-
     //Funciones
     void takeDamage();
     void combat();

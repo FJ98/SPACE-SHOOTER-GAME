@@ -14,7 +14,6 @@ public:
     void draw( sf::RenderTarget &target );
     void update( bool & );
     int get_WINDOW(){ return WINDOW; }
-
 };
 
 

@@ -28,25 +28,28 @@ static auto SND_CHOCK = "./sound/choque.ogg";
 enum enem{enemy1};
 namespace GameConfig{
     static int WIN_SCORE = 100;
-    static int ENEMY_TIME_MAX = 20,
+    static int ENEMY_TIME_MAX = 20, // modificar 1: 15
     CURRENT_ENEMY_TIME = 0, ENEMY_COUNTER = 0;
 }
 
 namespace PlayerConfig{
     const float NAVE_SPEED = 1.0f, NAVE_SCALE = 0.07f,
             NAVE_MAX_VEL = 25.0f, NAVE_ACCELERATION = 0.3f, NAVE_STABLE = 0.07f;
-    const int SHOOT_TIMER_MAX = 15/*, DAMAGE_TIMER_MAX = 10*/;
+    const int SHOOT_TIMER_MAX = 15, NAVE_LIFE = 3; // modificar 2: 10
     static auto MUSIC_SHOOT = "./sound/shoot.wav";
 }
 
 namespace EnemyConfig{
-    const float ENEMY_SPEED = 12.0f, ENEMY_SCALE = 0.03f;
+    const float ENEMY_SPEED = 12.0f; //modificar 1: 17.0f
+    const float ENEMY_SCALE = 0.03f;
+    const int ENEMY_LIFE = 10; // modificar 3: 20 para que muera en dos disparos
+    const int ENEMY_DANO = 10;
 }
 
 namespace Bala{
     const float BALA_DIRX = 1.0f,
     BALA_DIRY = 0.0f, BALA_INIT_VEL = 2.0f,
-    BALA_MAX_VEL = 50.0f, BALA_ACCEL = 1.0f;
+    BALA_MAX_VEL = 50.0f, BALA_ACCEL = 1.0f; // modificar 4: 100
 }
 
 enum windows{menu,game};
