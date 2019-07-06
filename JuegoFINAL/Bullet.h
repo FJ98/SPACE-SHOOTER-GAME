@@ -2,15 +2,7 @@
 #ifndef JUEGO_BULLET_H
 #define JUEGO_BULLET_H
 
-#include <SFML/Graphics.hpp>
-#include <SFML/System.hpp>
-#include <SFML/Audio.hpp>
 #include "Config.h"
-#include <iostream>
-#include <vector>
-#include <cstdlib>
-#include <random>
-using namespace sf; using namespace std;
 
 class Bullet {
 private:
@@ -21,11 +13,11 @@ private:
     float initialVelocity, maxVelocity;
 
     sf::Vector2f direction;
+
 public:
     Bullet( sf::Texture *texture,sf::Vector2f position,
             sf::Vector2f direction,float initialVelocity,
             float maxVelocity,float acceleration);
-    virtual ~Bullet();
 
     //Accesos
     inline const sf::FloatRect getGlobalBounds() const {return this->sprite.getGlobalBounds();}
@@ -35,7 +27,6 @@ public:
     void movement();
     void update();
     void draw(sf::RenderTarget &target);
-
 };
 
 

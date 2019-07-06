@@ -4,12 +4,12 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/felix/Downloads/Juego/Bullet.cpp" "C:/Users/felix/Downloads/Juego/cmake-build-debug/CMakeFiles/SFMLApp.dir/Bullet.cpp.obj"
-  "C:/Users/felix/Downloads/Juego/Enemy.cpp" "C:/Users/felix/Downloads/Juego/cmake-build-debug/CMakeFiles/SFMLApp.dir/Enemy.cpp.obj"
-  "C:/Users/felix/Downloads/Juego/Game.cpp" "C:/Users/felix/Downloads/Juego/cmake-build-debug/CMakeFiles/SFMLApp.dir/Game.cpp.obj"
-  "C:/Users/felix/Downloads/Juego/Menu.cpp" "C:/Users/felix/Downloads/Juego/cmake-build-debug/CMakeFiles/SFMLApp.dir/Menu.cpp.obj"
-  "C:/Users/felix/Downloads/Juego/Player.cpp" "C:/Users/felix/Downloads/Juego/cmake-build-debug/CMakeFiles/SFMLApp.dir/Player.cpp.obj"
-  "C:/Users/felix/Downloads/Juego/main.cpp" "C:/Users/felix/Downloads/Juego/cmake-build-debug/CMakeFiles/SFMLApp.dir/main.cpp.obj"
+  "C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Bullet.cpp" "C:/Users/felix/GitHubs/Galaga/JuegoFINAL/cmake-build-debug/CMakeFiles/SFMLApp.dir/Bullet.cpp.obj"
+  "C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Enemy.cpp" "C:/Users/felix/GitHubs/Galaga/JuegoFINAL/cmake-build-debug/CMakeFiles/SFMLApp.dir/Enemy.cpp.obj"
+  "C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Game.cpp" "C:/Users/felix/GitHubs/Galaga/JuegoFINAL/cmake-build-debug/CMakeFiles/SFMLApp.dir/Game.cpp.obj"
+  "C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Menu.cpp" "C:/Users/felix/GitHubs/Galaga/JuegoFINAL/cmake-build-debug/CMakeFiles/SFMLApp.dir/Menu.cpp.obj"
+  "C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Player.cpp" "C:/Users/felix/GitHubs/Galaga/JuegoFINAL/cmake-build-debug/CMakeFiles/SFMLApp.dir/Player.cpp.obj"
+  "C:/Users/felix/GitHubs/Galaga/JuegoFINAL/main.cpp" "C:/Users/felix/GitHubs/Galaga/JuegoFINAL/cmake-build-debug/CMakeFiles/SFMLApp.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

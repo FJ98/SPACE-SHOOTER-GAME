@@ -1,6 +1,5 @@
-// Created by luis0 on 15/06/2019.
+// Created by felix on 15/06/2019.
 #include "Menu.h"
-static auto T_MENU = "./images/menu_background.jpg";
 
 Menu::Menu(){
     this->texture_menu.loadFromFile(T_MENU);
@@ -17,7 +16,7 @@ void Menu::draw(sf::RenderTarget &target){
     target.draw(this->sprite_eleccion);
 }
 
-void Menu::update(bool &exit){
+void Menu::update(bool &_exit){
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::S) && sprite_eleccion.getPosition().y != MenuScale::MENU_NAVE_DOWN){
         this->sprite_eleccion.setPosition(600.0f,MenuScale::MENU_NAVE_DOWN);
     }
@@ -28,6 +27,6 @@ void Menu::update(bool &exit){
         this->WINDOW = game;
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::Enter) && sprite_eleccion.getPosition().y == MenuScale::MENU_NAVE_DOWN){
-        exit=true;
+        _exit = true;
     }
 }

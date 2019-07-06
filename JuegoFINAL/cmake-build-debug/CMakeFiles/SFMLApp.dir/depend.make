@@ -95,6 +95,7 @@ CMakeFiles/SFMLApp.dir/Bullet.cpp.obj: C:/SFML-2.5.1/include/SFML/Window/WindowS
 CMakeFiles/SFMLApp.dir/Bullet.cpp.obj: ../Bullet.cpp
 CMakeFiles/SFMLApp.dir/Bullet.cpp.obj: ../Bullet.h
 CMakeFiles/SFMLApp.dir/Bullet.cpp.obj: ../Config.h
+CMakeFiles/SFMLApp.dir/Bullet.cpp.obj: ../Funciones.h
 
 CMakeFiles/SFMLApp.dir/Enemy.cpp.obj: C:/SFML-2.5.1/include/SFML/Audio.hpp
 CMakeFiles/SFMLApp.dir/Enemy.cpp.obj: C:/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -191,6 +192,8 @@ CMakeFiles/SFMLApp.dir/Enemy.cpp.obj: ../Bullet.h
 CMakeFiles/SFMLApp.dir/Enemy.cpp.obj: ../Config.h
 CMakeFiles/SFMLApp.dir/Enemy.cpp.obj: ../Enemy.cpp
 CMakeFiles/SFMLApp.dir/Enemy.cpp.obj: ../Enemy.h
+CMakeFiles/SFMLApp.dir/Enemy.cpp.obj: ../Entity.h
+CMakeFiles/SFMLApp.dir/Enemy.cpp.obj: ../Funciones.h
 
 CMakeFiles/SFMLApp.dir/Game.cpp.obj: C:/SFML-2.5.1/include/SFML/Audio.hpp
 CMakeFiles/SFMLApp.dir/Game.cpp.obj: C:/SFML-2.5.1/include/SFML/Audio/AlResource.hpp
@@ -286,6 +289,8 @@ CMakeFiles/SFMLApp.dir/Game.cpp.obj: C:/SFML-2.5.1/include/SFML/Window/WindowSty
 CMakeFiles/SFMLApp.dir/Game.cpp.obj: ../Bullet.h
 CMakeFiles/SFMLApp.dir/Game.cpp.obj: ../Config.h
 CMakeFiles/SFMLApp.dir/Game.cpp.obj: ../Enemy.h
+CMakeFiles/SFMLApp.dir/Game.cpp.obj: ../Entity.h
+CMakeFiles/SFMLApp.dir/Game.cpp.obj: ../Funciones.h
 CMakeFiles/SFMLApp.dir/Game.cpp.obj: ../Game.cpp
 CMakeFiles/SFMLApp.dir/Game.cpp.obj: ../Game.h
 CMakeFiles/SFMLApp.dir/Game.cpp.obj: ../Menu.h
@@ -383,6 +388,7 @@ CMakeFiles/SFMLApp.dir/Menu.cpp.obj: C:/SFML-2.5.1/include/SFML/Window/Window.hp
 CMakeFiles/SFMLApp.dir/Menu.cpp.obj: C:/SFML-2.5.1/include/SFML/Window/WindowHandle.hpp
 CMakeFiles/SFMLApp.dir/Menu.cpp.obj: C:/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/SFMLApp.dir/Menu.cpp.obj: ../Config.h
+CMakeFiles/SFMLApp.dir/Menu.cpp.obj: ../Funciones.h
 CMakeFiles/SFMLApp.dir/Menu.cpp.obj: ../Menu.cpp
 CMakeFiles/SFMLApp.dir/Menu.cpp.obj: ../Menu.h
 
@@ -479,6 +485,8 @@ CMakeFiles/SFMLApp.dir/Player.cpp.obj: C:/SFML-2.5.1/include/SFML/Window/WindowH
 CMakeFiles/SFMLApp.dir/Player.cpp.obj: C:/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 CMakeFiles/SFMLApp.dir/Player.cpp.obj: ../Bullet.h
 CMakeFiles/SFMLApp.dir/Player.cpp.obj: ../Config.h
+CMakeFiles/SFMLApp.dir/Player.cpp.obj: ../Entity.h
+CMakeFiles/SFMLApp.dir/Player.cpp.obj: ../Funciones.h
 CMakeFiles/SFMLApp.dir/Player.cpp.obj: ../Player.cpp
 CMakeFiles/SFMLApp.dir/Player.cpp.obj: ../Player.h
 
@@ -576,6 +584,8 @@ CMakeFiles/SFMLApp.dir/main.cpp.obj: C:/SFML-2.5.1/include/SFML/Window/WindowSty
 CMakeFiles/SFMLApp.dir/main.cpp.obj: ../Bullet.h
 CMakeFiles/SFMLApp.dir/main.cpp.obj: ../Config.h
 CMakeFiles/SFMLApp.dir/main.cpp.obj: ../Enemy.h
+CMakeFiles/SFMLApp.dir/main.cpp.obj: ../Entity.h
+CMakeFiles/SFMLApp.dir/main.cpp.obj: ../Funciones.h
 CMakeFiles/SFMLApp.dir/main.cpp.obj: ../Game.h
 CMakeFiles/SFMLApp.dir/main.cpp.obj: ../Menu.h
 CMakeFiles/SFMLApp.dir/main.cpp.obj: ../Player.h

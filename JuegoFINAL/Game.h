@@ -11,11 +11,16 @@ class Game {
 private:
     sf::RenderWindow *window;
     Menu wind;
+    sf::Sound chock;
+    sf::SoundBuffer chockBuff;
    // std::thread first;
     //std::thread second;
+   // Random Numbers
+   std::random_device rd;
+    std::mt19937 mt;
     // Texto
     bool exit;
-    bool isExit = false;
+    //bool isExit = false;
     sf::Font font;
     std::vector<sf::Text> followPlayerTexts;
     std::vector<sf::Text> staticPlayerTexts;
@@ -38,39 +43,30 @@ private:
     sf::Music music ;
 
 public:
-    Game(sf::RenderWindow *window);
-    virtual ~Game();
+    explicit Game(sf::RenderWindow *window);
+    ~Game() = default;
 
     //Accesos
-    inline sf::RenderWindow& getWindow(){return *this->window;}
+    //inline sf::RenderWindow& getWindow(){return *this->window;}
 
     //Funciones
+    void colissionBulletEnemy();
+    void colissionPlayerEnemy();
     void enemyupdate();
     void playerupdate();
 
     void initUI();
     void updateUI();
     void drawUI();
-    void CombatUpdate();
     void update();
     void draw();
     void controlBoundsNave();
-    //void cargarMusica (sf::Music& target, const std::string& path);
     bool getExit() { return exit;}
-    Menu getMenu(){return this->wind;}
+    //Menu getMenu(){return this->wind;}
     int getScore(){return this->score;}
     std::vector<Player> getPlayers(){return this->players;}
+    sf::Music &getMusic() {return this->music;}
 };
-
-template <typename T>
-void cargar(T& target, std::string path) {
-    target.loadFromFile(path);
-}
-
-template <>
-inline void cargar<sf::Music>(sf::Music& target, std::string path) {
-    target.openFromFile(path);
-}
 
 
 #endif //JUEGO_GAME_H

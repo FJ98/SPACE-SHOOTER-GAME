@@ -2,36 +2,28 @@
 #ifndef JUEGO_ENEMY_H
 #define JUEGO_ENEMY_H
 
+#include "Entity.h"
 #include "Bullet.h"
 
-class Enemy {
+class Enemy : public Entity{
 private:
-    sf::Texture *texture;
-    sf::Sprite sprite;
-    int hp; int hpMax;
-
-    int type;
+    int type; // tipo de enemigo
 public:
-    Enemy(sf::Texture *texture, sf::Vector2u windowBounds,
-          sf::Vector2f position,
-          sf::Vector2f direction,
-          int type, int hpMax);
+    Enemy(sf::Texture *texture, sf::Vector2f position, int type, int hpMax);
+    ~Enemy() = default;
 
-    ~Enemy();
-
-    //Accesos
-    inline const int getHP() const { return this->hp; }
+    //ACCESOS
     inline const int getHPMax() const { return this->hpMax; }
-    inline const bool isDamage() const { return this->hp <= 0; }
-    inline const FloatRect getGlobalBounds() const { return sprite.getGlobalBounds(); }
-    inline const sf::Vector2f getPosition() const { return sprite.getPosition(); }
 
-    //Funciones
+    //FUNCIONES
     void takeDamage(int damage);
-    void update(sf::Vector2u windowBounds);
+    void update();
     void draw(sf::RenderTarget &target);
-
 };
+
+
+//inline const int getDamage() const { return rand() % this->damageMax + this->damageMin; }
+//inline const bool isDamage() const { return this->hp <= 0; }
 
 
 #endif //JUEGO_ENEMY_H

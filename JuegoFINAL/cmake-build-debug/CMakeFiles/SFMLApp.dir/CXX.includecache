@@ -850,7 +850,7 @@ SFML/Config.hpp
 
 C:/SFML-2.5.1/include/SFML/Window/WindowStyle.hpp
 
-C:/Users/felix/Downloads/Juego/Config.h
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Config.h
 SFML/Graphics.hpp
 -
 SFML/System.hpp
@@ -861,20 +861,22 @@ iostream
 -
 vector
 -
-cstdlib
+array
 -
 random
 -
+algorithm
+-
+Funciones.h
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Funciones.h
 
-C:/Users/felix/Downloads/Juego/Menu.cpp
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Funciones.h
+
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Menu.cpp
 Menu.h
-C:/Users/felix/Downloads/Juego/Menu.h
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Menu.h
 
-C:/Users/felix/Downloads/Juego/Menu.h
-vector
--
-SFML/Graphics.hpp
--
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Menu.h
 Config.h
-C:/Users/felix/Downloads/Juego/Config.h
+C:/Users/felix/GitHubs/Galaga/JuegoFINAL/Config.h
 

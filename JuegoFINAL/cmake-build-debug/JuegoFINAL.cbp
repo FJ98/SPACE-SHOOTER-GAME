@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="Juego"/>
+		<Option title="JuegoFINAL"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\SFML-2.5.1\;CMake Files\..\..\..\..\..\SFML-2.5.1\lib\;CMake Files\..\..\..\..\..\SFML-2.5.1\lib\cmake\;CMake Files\..\..\..\..\..\SFML-2.5.1\lib\cmake\SFML\;"/>

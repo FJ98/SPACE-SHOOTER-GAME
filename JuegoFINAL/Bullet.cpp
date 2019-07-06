@@ -7,9 +7,10 @@ Bullet::Bullet(sf::Texture *texture,sf::Vector2f position,
                float maxVelocity,float acceleration){
     this->texture = texture;
     this->sprite.setTexture(*this->texture);
+    this->initialVelocity = initialVelocity;
     this->currentVelocity = sf::Vector2f(
-            initialVelocity * this->direction.x,
-            initialVelocity * this->direction.y);
+            this->initialVelocity * this->direction.x,
+            this->initialVelocity * this->direction.y);
 
     this->maxVelocity = maxVelocity;
     this->acceleration = acceleration;
@@ -17,10 +18,6 @@ Bullet::Bullet(sf::Texture *texture,sf::Vector2f position,
     this->sprite.setPosition(sf::Vector2f(
             position.x - this->sprite.getGlobalBounds().width / 2,
             position.y - this->sprite.getGlobalBounds().height / 2)); // Revisar
-}
-
-Bullet::~Bullet() {
-
 }
 
 void Bullet::movement() {
