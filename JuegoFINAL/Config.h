@@ -27,7 +27,7 @@ static auto SND_CHOCK = "./sound/choque.ogg";
 
 enum enem{enemy1};
 namespace GameConfig{
-    static int WIN_SCORE = 100;
+    static int WIN_SCORE = 100; // MOD 4
     static int ENEMY_TIME_MAX = 20, // modificar 1: 15
     CURRENT_ENEMY_TIME = 0, ENEMY_COUNTER = 0;
 }

@@ -211,4 +211,3 @@ void Game::controlBoundsNave() {
         }
     }
 }
-
