@@ -5,7 +5,6 @@
 #include "Config.h"
 
 class Menu {
-    //bool exit = false;
     sf::Texture texture_menu, texture_eleccion;
     sf::Sprite sprite_menu, sprite_eleccion;
     int WINDOW = menu;
